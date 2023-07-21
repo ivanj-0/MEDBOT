@@ -1,0 +1,1499 @@
+version: "3.1"
+nlu:
+- intent: nlu_fallback
+  examples: |
+    - sflsjfi
+    - dbfjkbd jfj sjffo dfgjdn
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hi
+    - Hello
+    - Howdy
+    - Greetings
+    - Hey, what's up?
+    - Yo
+    - Wassup?
+    - Hiya
+    - Hey, how's it going?
+    - Good to see you
+    - Hiya, mate
+    - What's crackin'?
+    - Hey, buddy
+    - Hey, folks
+    - Salutations
+    - Hola
+    - Bonjour
+    - Hey, howdy!
+    - Hey, there!
+    - Hi, friend
+    - Hello, bot
+    - Good day
+    - Hi, nice to meet you
+    - Hey, what's happening?
+    - G'day, mate
+    - Hey, beautiful
+    - Hi, how are you doing?
+    - Hey, sunshine
+    - Hey, partner
+    - Hi, lovely people
+    - Hey, good-lookin'!
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - Goodbye
+    - Take care
+    - Farewell
+    - See you soon
+    - Until next time
+    - Peace out
+    - Catch you later
+    - Adios
+    - Have a great day
+    - So long
+    - Bye for now
+    - See you tomorrow
+    - Have a good one
+    - Take it easy
+    - Later, alligator
+    - Bye, take care
+    - Hasta luego
+    - See you next time
+    - Goodnight and sweet dreams
+    - Wishing you well
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - fantastic
+    - on top of the world
+    - ecstatic
+    - thrilled
+    - overjoyed
+    - delighted
+    - elated
+    - pumped up
+    - full of joy
+    - euphoric
+    - blissful
+    - feeling fantastic
+    - in a state of bliss
+    - couldn't be better
+    - beaming with happiness
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - feeling down
+    - miserable
+    - devastated
+    - heartbroken
+    - feeling low
+    - gloomy
+    - dejected
+    - upset
+    - frustrated
+    - down in the dumps
+    - disheartened
+    - sorrowful
+    - feeling blue
+    - overwhelmed with sadness
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - is this a bot?
+    - is this a human?
+    - are you an AI?
+    - are you real?
+    - am I chatting with a machine?
+    - am I chatting with a person?
+    - is there a real person behind this?
+    - is there an AI behind this?
+    - can you prove you're not a bot?
+    - can you prove you're human?
+    - are you a robot or a person?
+    - do you have feelings?
+    - do you have emotions?
+    - can you think?
+    - can you pass the Turing test?
+- intent: info_condition
+  examples: |
+    - need some [info]{"entity": "infotype", "value": "Overview"} on [allergies] {"entity": "condition", "value": "Allergies"} 
+    - I have [allergies] {"entity": "condition", "value": "Allergies"} can you help?
+    - [Allergies] {"entity": "condition", "value": "Allergies"}, need help
+    - I think I have an [allergies] {"entity": "condition", "value": "Allergies"}, what [can I do]{"entity": "infotype", "value": "Treatment"}?
+    - Can I get some help with [Conjunctivitis]{"entity": "condition", "value": "Conjunctivitis"}?
+    - My brother has [Conjunctivitis]{"entity": "condition", "value": "Conjunctivitis"}, how [can I help]{"entity": "infotype", "value": "Treatment"} him?
+    - What are the common [symptoms]{"entity": "infotype", "value": "Symptoms"} of [Conjunctivitis]{"entity": "condition", "value": "Conjunctivitis"}?
+    - How is [Diarrhea]{"entity": "condition", "value": "Diarrhea"} [diagnosed]{"entity": "infotype", "value": "Diagnosis"}?
+    - What are the common [symptoms]{"entity": "infotype", "value": "Symptoms"} of [Mononucleosis]{"entity": "condition", "value": "Mononucleosis"}?
+    - How is [Cold and Flu] {"entity": "condition", "value": " Common cold "} [diagnosed]{"entity": "infotype", "value": "Diagnosis"}?
+    - Can you explain the [causes]{"entity": "infotype", "value": "Causes"} of {"entity": "condition", "value": "Allergies"}?
+    - What are some common [causes]{"entity": "infotype", "value": "Causes"} of [Conjunctivitis]{"entity": "condition", "value": "Conjunctivitis"}?
+    - Are there any effective [treatments]{"entity": "infotype", "value": "Treatment"} for [Conjunctivitis]{"entity": "condition", "value": "Conjunctivitis"}?
+    - How can I manage my [Mononucleosis]{"entity": "condition", "value": "Mononucleosis"} on a daily basis?
+    - Can [Diarrhea]{"entity": "condition", "value": "Diarrhea"} be [prevented]{"entity": "infotype", "value": "Prevention"}?
+    - i NEED [INFO]{"entity": "infotype", "value": "Overview"} ON [allergies]{"entity": "condition", "value": "Allergies"}
+    - I need some help with [Conjunctivitis]{"entity": "condition", "value": "Conjunctivitis"}
+    - i NEED [INFO]{"entity": "infotype", "value": "Overview"} ON [Conjunctivitis]{"entity": "condition", "value": "Conjunctivitis"}
+    - I need [info]{"entity": "infotype", "value": "Overview"}.
+    - [Conjunctivitis]{"entity": "condition", "value": "Conjunctivitis"}
+    - I need [info]{"entity": "infotype", "value": "Overview"} on [Pinkeye]{"entity": "condition", "value": "Conjunctivitis"}
+    - Can you provide an [overview]{"entity": "infotype", "value": "Overview"} of [allergies]{"entity": "condition", "value": "Allergies"}?
+    - Tell me about [Conjunctivitis]{"entity": "condition", "value": "Conjunctivitis"} and its [treatment]{"entity": "infotype", "value": "Treatment"}.
+    - What are the common [causes]{"entity": "infotype", "value": "Causes"} of [asthma]{"entity": "condition", "value": "Asthma"}? 
+    - I need {"entity": "infotype", "value": "Overview"}
+    - [Overview]{"entity": "infotype", "value": "Overview"}
+    - [Symptoms]{"entity": "infotype", "value": "Symptoms"}
+    - [Symptom]{"entity": "infotype", "value": "Symptoms"}
+    - [When to see a doctor]{"entity": "infotype", "value": "When to see a doctor"}
+    - [doctor when]{"entity": "infotype", "value": "When to see a doctor"}
+    - [Causes]{"entity": "infotype", "value": "Causes"}
+    - [Cause]{"entity": "infotype", "value": "Causes"}
+    - [Risk factors]{"entity": "infotype", "value": "Risk factors"}
+    - [Complications]{"entity": "infotype", "value": "Complications"}
+    - [Risk factor]{"entity": "infotype", "value": "Risk factors"}
+    - [Complication]{"entity": "infotype", "value": "Complications"}
+    - [Prevention]{"entity": "infotype", "value": "Prevention"}
+    - [Diagnosis]{"entity": "infotype", "value": "Diagnosis"}
+    - [Treatment]{"entity": "infotype", "value": "Treatment"}
+    - [Abdominal aortic aneurysm]{"entity": "condition", "value": "Abdominal aortic aneurysm"}
+    - [Absence seizure]{"entity": "condition", "value": "Absence seizure"}
+    - [Acanthosis nigricans]{"entity": "condition", "value": "Acanthosis nigricans"}
+    - [Achalasia]{"entity": "condition", "value": "Achalasia"}
+    - [Achilles tendinitis]{"entity": "condition", "value": "Achilles tendinitis"}
+    - [Achilles tendon rupture]{"entity": "condition", "value": "Achilles tendon rupture"}
+    - [ACL injury]{"entity": "condition", "value": "ACL injury"}
+    - [Acne]{"entity": "condition", "value": "Acne"}
+    - [Acoustic neuroma]{"entity": "condition", "value": "Acoustic neuroma"}
+    - [Acromegaly]{"entity": "condition", "value": "Acromegaly"}
+    - [Actinic keratosis]{"entity": "condition", "value": "Actinic keratosis"}
+    - [Acute coronary syndrome]{"entity": "condition", "value": "Acute coronary syndrome"}
+    - [Acute flaccid myelitis]{"entity": "condition", "value": "Acute flaccid myelitis"}
+    - [AFM]{"entity": "condition", "value": "Acute flaccid myelitis"}
+    - [Acute kidney failure]{"entity": "condition", "value": "Acute kidney failure"}
+    - [Acute liver failure]{"entity": "condition", "value": "Acute liver failure"}
+    - [Acute lymphocytic leukemia]{"entity": "condition", "value": "Acute lymphocytic leukemia"}
+    - [Acute myelogenous leukemia]{"entity": "condition", "value": "Acute myelogenous leukemia"}
+    - [Acute sinusitis]{"entity": "condition", "value": "Acute sinusitis"}
+    - [Addison's disease]{"entity": "condition", "value": "Addison's disease"}
+    - [Adenomyosis]{"entity": "condition", "value": "Adenomyosis"}
+    - [Adjustment disorders]{"entity": "condition", "value": "Adjustment disorders"}
+    - [Adnexal tumors]{"entity": "condition", "value": "Adnexal tumors"}
+    - [Adrenal cancer]{"entity": "condition", "value": "Adrenal cancer"}
+    - [Adrenoleukodystrophy]{"entity": "condition", "value": "Adrenoleukodystrophy"}
+    - [Adult attention deficit]{"entity": "condition", "value": "ADHD"}
+    - [hyperactivity disorder]{"entity": "condition", "value": "ADHD"}
+    - [ADHD]{"entity": "condition", "value": "ADHD"}
+    - [Adult Still disease]{"entity": "condition", "value": "Adult Still disease"}
+    - [Age spots]{"entity": "condition", "value": "Age spots"}
+    - [liver spots]{"entity": "condition", "value": "Age spots"}
+    - [Agoraphobia]{"entity": "condition", "value": "Agoraphobia"}
+    - [Airplane ear]{"entity": "condition", "value": "Airplane ear"}
+    - [Albinism]{"entity": "condition", "value": "Albinism"}
+    - [Alcohol intolerance]{"entity": "condition", "value": "Alcohol intolerance"}
+    - [Alcohol poisoning]{"entity": "condition", "value": "Alcohol poisoning"}
+    - [Alcohol use disorder]{"entity": "condition", "value": "Alcohol use disorder"}
+    - [Alcoholic hepatitis]{"entity": "condition", "value": "Alcoholic hepatitis"}
+    - [Allergies]{"entity": "condition", "value": "Allergies"}
+    - [Alpha gal syndrome]{"entity": "condition", "value": "Alpha-gal syndrome"}
+    - [Alzheimer's disease]{"entity": "condition", "value": "Alzheimer's disease"}
+    - [Ambiguous genitalia]{"entity": "condition", "value": "Ambiguous genitalia"}
+    - [Ameloblastoma]{"entity": "condition", "value": "Ameloblastoma"}
+    - [Amenorrhea]{"entity": "condition", "value": "Amenorrhea"}
+    - [Amnesia]{"entity": "condition", "value": "Amnesia"}
+    - [Ampullary cancer]{"entity": "condition", "value": "Ampullary cancer"}
+    - [Amyloidosis]{"entity": "condition", "value": "Amyloidosis"}
+    - [Amyotrophic lateral sclerosis]{"entity": "condition", "value": "Amyotrophic lateral sclerosis"}
+    - [ALS]{"entity": "condition", "value": "Amyotrophic lateral sclerosis"}
+    - [Anal cancer]{"entity": "condition", "value": "Anal cancer"}
+    - [Anal fissure]{"entity": "condition", "value": "Anal fissure"}
+    - [Anal fistula]{"entity": "condition", "value": "Anal fistula"}
+    - [Anal itching]{"entity": "condition", "value": "Anal itching"}
+    - [Anaphylaxis]{"entity": "condition", "value": "Anaphylaxis"}
+    - [Anemia]{"entity": "condition", "value": "Anemia"}
+    - [Aneurysms]{"entity": "condition", "value": "Aneurysms"}
+    - [Angelman syndrome]{"entity": "condition", "value": "Angelman syndrome"}
+    - [Angina]{"entity": "condition", "value": "Angina"}
+    - [Angiosarcoma]{"entity": "condition", "value": "Angiosarcoma"}
+    - [Ankylosing spondylitis]{"entity": "condition", "value": "Ankylosing spondylitis"}
+    - [Anorexia nervosa]{"entity": "condition", "value": "Anorexia nervosa"}
+    - [Anorgasmia in women]{"entity": "condition", "value": "Anorgasmia in women"}
+    - [Anterior vaginal prolapse]{"entity": "condition", "value": "Anterior vaginal prolapse"}
+    - [cystocele]{"entity": "condition", "value": "Anterior vaginal prolapse"}
+    - [Anthrax]{"entity": "condition", "value": "Anthrax"}
+    - [Antibiotic associated diarrhea]{"entity": "condition", "value": "Antibiotic-associated diarrhea"}
+    - [Antiphospholipid syndrome]{"entity": "condition", "value": "Antiphospholipid syndrome"}
+    - [Antisocial personality disorder]{"entity": "condition", "value": "Antisocial personality disorder"}
+    - [Anxiety disorders]{"entity": "condition", "value": "Anxiety disorders"}
+    - [Aortic aneurysm]{"entity": "condition", "value": "Aortic aneurysm"}
+    - [Aortic dissection]{"entity": "condition", "value": "Aortic dissection"}
+    - [Aortic valve disease]{"entity": "condition", "value": "Aortic valve disease"}
+    - [Aortic valve regurgitation]{"entity": "condition", "value": "Aortic valve regurgitation"}
+    - [Aortic valve stenosis]{"entity": "condition", "value": "Aortic valve stenosis"}
+    - [Aphasia]{"entity": "condition", "value": "Aphasia"}
+    - [Aplastic anemia]{"entity": "condition", "value": "Aplastic anemia"}
+    - [Appendicitis]{"entity": "condition", "value": "Appendicitis"}
+    - [ARDS]{"entity": "condition", "value": "ARDS"}
+    - [Arteriosclerosis]{"entity": "condition", "value": "Arteriosclerosis"}
+    - [atherosclerosis]{"entity": "condition", "value": "Arteriosclerosis"}
+    - [Arteriovenous fistula]{"entity": "condition", "value": "Arteriovenous fistula"}
+    - [Arteriovenous malformation]{"entity": "condition", "value": "Arteriovenous malformation"}
+    - [Arthritis]{"entity": "condition", "value": "Arthritis"}
+    - [Asbestosis]{"entity": "condition", "value": "Asbestosis"}
+    - [Ascariasis]{"entity": "condition", "value": "Ascariasis"}
+    - [Aspergillosis]{"entity": "condition", "value": "Aspergillosis"}
+    - [Asthma]{"entity": "condition", "value": "Asthma"}
+    - [Asthma attack]{"entity": "condition", "value": "Asthma attack"}
+    - [Astigmatism]{"entity": "condition", "value": "Astigmatism"}
+    - [Astrocytoma]{"entity": "condition", "value": "Astrocytoma"}
+    - [Ataxia]{"entity": "condition", "value": "Ataxia"}
+    - [Atelectasis]{"entity": "condition", "value": "Atelectasis"}
+    - [Athlete's foot]{"entity": "condition", "value": "Athlete's foot"}
+    - [Atopic dermatitis]{"entity": "condition", "value": "Atopic dermatitis"}
+    - [eczema]{"entity": "condition", "value": "Atopic dermatitis"}
+    - [Atrial fibrillation]{"entity": "condition", "value": "Atrial fibrillation"}
+    - [Atrial flutter]{"entity": "condition", "value": "Atrial flutter"}
+    - [Atrial septal defect]{"entity": "condition", "value": "Atrial septal defect"}
+    - [ASD]{"entity": "condition", "value": "Atrial septal defect"}
+    - [Atrial tachycardia]{"entity": "condition", "value": "Atrial tachycardia"}
+    - [Atrioventricular canal defect]{"entity": "condition", "value": "Atrioventricular canal defect"}
+    - [Atrioventricular nodal reentry tachycardia]{"entity": "condition", "value": "Atrioventricular nodal reentry tachycardia"}
+    - [AVNRT]{"entity": "condition", "value": "Atrioventricular nodal reentry tachycardia"}
+    - [Attention deficit in children]{"entity": "condition", "value": "ADHD in children"}
+    - [hyperactivity disorder in children]{"entity": "condition", "value": "ADHD in children"}
+    - [ADHD in children]{"entity": "condition", "value": "ADHD in children"}
+    - [Atypical hyperplasia of the breast]{"entity": "condition", "value": "Atypical hyperplasia of the breast"}
+    - [Autism spectrum disorder]{"entity": "condition", "value": "Autism spectrum disorder"}
+    - [Autoimmune hepatitis]{"entity": "condition", "value": "Autoimmune hepatitis"}
+    - [Autoimmune pancreatitis]{"entity": "condition", "value": "Autoimmune pancreatitis"}
+    - [Autonomic neuropathy]{"entity": "condition", "value": "Autonomic neuropathy"}
+    - [Avascular necrosis]{"entity": "condition", "value": "Avascular necrosis"}
+    - [osteonecrosis]{"entity": "condition", "value": "Avascular necrosis"}
+    - [Baby acne]{"entity": "condition", "value": "Baby acne"}
+    - [Back pain]{"entity": "condition", "value": "Back pain"}
+    - [Bacterial vaginosis]{"entity": "condition", "value": "Bacterial vaginosis"}
+    - [Bad breath]{"entity": "condition", "value": "Bad breath"}
+    - [Bags under eyes]{"entity": "condition", "value": "Bags under eyes"}
+    - [Baker cyst]{"entity": "condition", "value": "Baker cyst"}
+    - [Balance problems]{"entity": "condition", "value": "Balance problems"}
+    - [Barrett's esophagus]{"entity": "condition", "value": "Barrett's esophagus"}
+    - [Bartholin's cyst]{"entity": "condition", "value": "Bartholin's cyst"}
+    - [Basal cell carcinoma]{"entity": "condition", "value": "Basal cell carcinoma"}
+    - [Bedbugs]{"entity": "condition", "value": "Bedbugs"}
+    - [Bedsores]{"entity": "condition", "value": "Bedsores"}
+    - [pressure ulcers]{"entity": "condition", "value": "Bedsores"}
+    - [Bed wetting]{"entity": "condition", "value": "Bed-wetting"}
+    - [Bee sting]{"entity": "condition", "value": "Bee sting"}
+    - [Behcet's disease]{"entity": "condition", "value": "Behcet's disease"}
+    - [Bell's palsy]{"entity": "condition", "value": "Bell's palsy"}
+    - [Benign adrenal tumors]{"entity": "condition", "value": "Benign adrenal tumors"}
+    - [Benign paroxysmal positional vertigo]{"entity": "condition", "value": "Benign paroxysmal positional vertigo"}
+    - [BPPV]{"entity": "condition", "value": "Benign paroxysmal positional vertigo"}
+    - [Benign peripheral nerve tumor]{"entity": "condition", "value": "Benign peripheral nerve tumor"}
+    - [Benign prostatic hyperplasia]{"entity": "condition", "value": "Benign prostatic hyperplasia"}
+    - [BPH]{"entity": "condition", "value": "Benign prostatic hyperplasia"}
+    - [Bicuspid aortic valve]{"entity": "condition", "value": "Bicuspid aortic valve"}
+    - [Bile reflux]{"entity": "condition", "value": "Bile reflux"}
+    - [Binge eating disorder]{"entity": "condition", "value": "Binge-eating disorder"}
+    - [Bipolar disorder]{"entity": "condition", "value": "Bipolar disorder"}
+    - [Black hairy tongue]{"entity": "condition", "value": "Black hairy tongue"}
+    - [Bladder cancer]{"entity": "condition", "value": "Bladder cancer"}
+    - [Bladder exstrophy]{"entity": "condition", "value": "Bladder exstrophy"}
+    - [Bladder stones]{"entity": "condition", "value": "Bladder stones"}
+    - [Blastocystis hominis]{"entity": "condition", "value": "Blastocystis hominis"}
+    - [Blepharitis]{"entity": "condition", "value": "Blepharitis"}
+    - [Blocked tear duct]{"entity": "condition", "value": "Blocked tear duct"}
+    - [Blood in urine]{"entity": "condition", "value": "Blood in urine"}
+    - [hematuria]{"entity": "condition", "value": "Blood in urine"}
+    - [Body dysmorphic disorder]{"entity": "condition", "value": "Body dysmorphic disorder"}
+    - [Body lice]{"entity": "condition", "value": "Body lice"}
+    - [Boils and carbuncles]{"entity": "condition", "value": "Boils and carbuncles"}
+    - [Bone cancer]{"entity": "condition", "value": "Bone cancer"}
+    - [Bone metastasis]{"entity": "condition", "value": "Bone metastasis"}
+    - [Bone spurs]{"entity": "condition", "value": "Bone spurs"}
+    - [Borderline personality disorder]{"entity": "condition", "value": "Borderline personality disorder"}
+    - [Botulism]{"entity": "condition", "value": "Botulism"}
+    - [Brachial plexus injury]{"entity": "condition", "value": "Brachial plexus injury"}
+    - [Bradycardia]{"entity": "condition", "value": "Bradycardia"}
+    - [Brain aneurysm]{"entity": "condition", "value": "Brain aneurysm"}
+    - [Brain AVM]{"entity": "condition", "value": "Brain AVM"}
+    - [arteriovenous malformation]{"entity": "condition", "value": "Brain AVM"}
+    - [Brain metastases]{"entity": "condition", "value": "Brain metastases"}
+    - [Brain tumor]{"entity": "condition", "value": "Brain tumor"}
+    - [Breast cancer]{"entity": "condition", "value": "Breast cancer"}
+    - [Breast cysts]{"entity": "condition", "value": "Breast cysts"}
+    - [Breast pain]{"entity": "condition", "value": "Breast pain"}
+    - [Broken ankle]{"entity": "condition", "value": "Broken ankle"}
+    - [Broken arm]{"entity": "condition", "value": "Broken arm"}
+    - [Broken collarbone]{"entity": "condition", "value": "Broken collarbone"}
+    - [Broken foot]{"entity": "condition", "value": "Broken foot"}
+    - [Broken hand]{"entity": "condition", "value": "Broken hand"}
+    - [Broken heart syndrome]{"entity": "condition", "value": "Broken heart syndrome"}
+    - [Broken leg]{"entity": "condition", "value": "Broken leg"}
+    - [Broken nose]{"entity": "condition", "value": "Broken nose"}
+    - [Broken ribs]{"entity": "condition", "value": "Broken ribs"}
+    - [Broken toe]{"entity": "condition", "value": "Broken toe"}
+    - [Broken wrist]{"entity": "condition", "value": "Broken wrist"}
+    - [Bronchiolitis]{"entity": "condition", "value": "Bronchiolitis"}
+    - [Bronchitis]{"entity": "condition", "value": "Bronchitis"}
+    - [Brucellosis]{"entity": "condition", "value": "Brucellosis"}
+    - [Brugada syndrome]{"entity": "condition", "value": "Brugada syndrome"}
+    - [Bruxism]{"entity": "condition", "value": "Bruxism"}
+    - [teeth grinding]{"entity": "condition", "value": "Bruxism"}
+    - [Buerger disease]{"entity": "condition", "value": "Buerger disease"}
+    - [Bulimia nervosa]{"entity": "condition", "value": "Bulimia nervosa"}
+    - [Bullous pemphigoid]{"entity": "condition", "value": "Bullous pemphigoid"}
+    - [Bundle branch block]{"entity": "condition", "value": "Bundle branch block"}
+    - [Bunions]{"entity": "condition", "value": "Bunions"}
+    - [Burning mouth syndrome]{"entity": "condition", "value": "Burning mouth syndrome"}
+    - [Burns]{"entity": "condition", "value": "Burns"}
+    - [Bursitis]{"entity": "condition", "value": "Bursitis"}
+    - [C. difficile infection]{"entity": "condition", "value": "C. difficile infection"}
+    - [Calciphylaxis]{"entity": "condition", "value": "Calciphylaxis"}
+    - [Cancer]{"entity": "condition", "value": "Cancer"}
+    - [Canker sore]{"entity": "condition", "value": "Canker sore"}
+    - [Carbon monoxide poisoning]{"entity": "condition", "value": "Carbon monoxide poisoning"}
+    - [Carcinoid syndrome]{"entity": "condition", "value": "Carcinoid syndrome"}
+    - [Carcinoid tumors]{"entity": "condition", "value": "Carcinoid tumors"}
+    - [Carcinoma of unknown primary]{"entity": "condition", "value": "Carcinoma of unknown primary"}
+    - [Cardiogenic shock]{"entity": "condition", "value": "Cardiogenic shock"}
+    - [Cardiomyopathy]{"entity": "condition", "value": "Cardiomyopathy"}
+    - [Carotid artery disease]{"entity": "condition", "value": "Carotid artery disease"}
+    - [Carpal tunnel syndrome]{"entity": "condition", "value": "Carpal tunnel syndrome"}
+    - [Castleman disease]{"entity": "condition", "value": "Castleman disease"}
+    - [Cataracts]{"entity": "condition", "value": "Cataracts"}
+    - [Cavernous malformations]{"entity": "condition", "value": "Cavernous malformations"}
+    - [Cavities]{"entity": "condition", "value": "Cavities"}
+    - [tooth decay]{"entity": "condition", "value": "Cavities"}
+    - [Celiac disease]{"entity": "condition", "value": "Celiac disease"}
+    - [Cellulite]{"entity": "condition", "value": "Cellulite"}
+    - [Cellulitis]{"entity": "condition", "value": "Cellulitis"}
+    - [Central nervous system vascular malformations]{"entity": "condition", "value": "Central nervous system vascular malformations"}
+    - [Central sleep apnea]{"entity": "condition", "value": "Central sleep apnea"}
+    - [Cerebral palsy]{"entity": "condition", "value": "Cerebral palsy"}
+    - [Cervical cancer]{"entity": "condition", "value": "Cervical cancer"}
+    - [Cervical dystonia]{"entity": "condition", "value": "Cervical dystonia"}
+    - [Cervical spondylosis]{"entity": "condition", "value": "Cervical spondylosis"}
+    - [Cervicitis]{"entity": "condition", "value": "Cervicitis"}
+    - [Chagas disease]{"entity": "condition", "value": "Chagas disease"}
+    - [Charcot Marie Tooth disease]{"entity": "condition", "value": "Charcot-Marie-Tooth disease"}
+    - [Chemo brain]{"entity": "condition", "value": "Chemo brain"}
+    - [Chest pain]{"entity": "condition", "value": "Chest pain"}
+    - [Chiari malformation]{"entity": "condition", "value": "Chiari malformation"}
+    - [Chickenpox]{"entity": "condition", "value": "Chickenpox"}
+    - [Chilblains]{"entity": "condition", "value": "Chilblains"}
+    - [Child abuse]{"entity": "condition", "value": "Child abuse"}
+    - [Childhood apraxia of speech]{"entity": "condition", "value": "Childhood apraxia of speech"}
+    - [Childhood asthma]{"entity": "condition", "value": "Childhood asthma"}
+    - [Childhood obesity]{"entity": "condition", "value": "Childhood obesity"}
+    - [Childhood schizophrenia]{"entity": "condition", "value": "Childhood schizophrenia"}
+    - [Chlamydia trachomatis]{"entity": "condition", "value": "Chlamydia trachomatis"}
+    - [Cholangiocarcinoma]{"entity": "condition", "value": "Cholangiocarcinoma"}
+    - [bile duct cancer]{"entity": "condition", "value": "Cholangiocarcinoma"}
+    - [Cholecystitis]{"entity": "condition", "value": "Cholecystitis"}
+    - [Cholera]{"entity": "condition", "value": "Cholera"}
+    - [Cholestasis of pregnancy]{"entity": "condition", "value": "Cholestasis of pregnancy"}
+    - [Chondrosarcoma]{"entity": "condition", "value": "Chondrosarcoma"}
+    - [Chordoma]{"entity": "condition", "value": "Chordoma"}
+    - [Choroid plexus carcinoma]{"entity": "condition", "value": "Choroid plexus carcinoma"}
+    - [Chronic cough]{"entity": "condition", "value": "Chronic cough"}
+    - [Chronic daily headaches]{"entity": "condition", "value": "Chronic daily headaches"}
+    - [Chronic exertional compartment syndrome]{"entity": "condition", "value": "Chronic exertional compartment syndrome"}
+    - [Chronic granulomatous disease]{"entity": "condition", "value": "Chronic granulomatous disease"}
+    - [Chronic hives]{"entity": "condition", "value": "Chronic hives"}
+    - [Chronic kidney disease]{"entity": "condition", "value": "Chronic kidney disease"}
+    - [Chronic lymphocytic leukemia]{"entity": "condition", "value": "Chronic lymphocytic leukemia"}
+    - [Chronic myelogenous leukemia]{"entity": "condition", "value": "Chronic myelogenous leukemia"}
+    - [Chronic pelvic pain in women]{"entity": "condition", "value": "Chronic pelvic pain in women"}
+    - [Chronic sinusitis]{"entity": "condition", "value": "Chronic sinusitis"}
+    - [Chronic traumatic encephalopathy]{"entity": "condition", "value": "Chronic traumatic encephalopathy"}
+    - [Churg Strauss syndrome]{"entity": "condition", "value": "Churg-Strauss syndrome"}
+    - [Cirrhosis]{"entity": "condition", "value": "Cirrhosis"}
+    - [Claudication]{"entity": "condition", "value": "Claudication"}
+    - [Cleft lip and cleft palate]{"entity": "condition", "value": "Cleft lip and cleft palate"}
+    - [Clubfoot]{"entity": "condition", "value": "Clubfoot"}
+    - [Cluster headache]{"entity": "condition", "value": "Cluster headache"}
+    - [Coarctation of the aorta]{"entity": "condition", "value": "Coarctation of the aorta"}
+    - [Cold sore]{"entity": "condition", "value": "Cold sore"}
+    - [Cold urticaria]{"entity": "condition", "value": "Cold urticaria"}
+    - [Colic]{"entity": "condition", "value": "Colic"}
+    - [Colon cancer]{"entity": "condition", "value": "Colon cancer"}
+    - [Colon polyps]{"entity": "condition", "value": "Colon polyps"}
+    - [Color blindness]{"entity": "condition", "value": "Color blindness"}
+    - [Coma]{"entity": "condition", "value": "Coma"}
+    - [Common cold]{"entity": "condition", "value": "Common cold"}
+    - [Common cold in babies]{"entity": "condition", "value": "Common cold in babies"}
+    - [Common variable immunodeficiency]{"entity": "condition", "value": "Common variable immunodeficiency"}
+    - [Common warts]{"entity": "condition", "value": "Common warts"}
+    - [Complex regional pain syndrome]{"entity": "condition", "value": "Complex regional pain syndrome"}
+    - [Complicated grief]{"entity": "condition", "value": "Complicated grief"}
+    - [Compulsive gambling]{"entity": "condition", "value": "Compulsive gambling"}
+    - [Compulsive sexual behavior]{"entity": "condition", "value": "Compulsive sexual behavior"}
+    - [Concussion]{"entity": "condition", "value": "Concussion"}
+    - [Congenital adrenal hyperplasia]{"entity": "condition", "value": "Congenital adrenal hyperplasia"}
+    - [Congenital diaphragmatic hernia]{"entity": "condition", "value": "Congenital diaphragmatic hernia"}
+    - [CDH]{"entity": "condition", "value": "Congenital diaphragmatic hernia"}
+    - [Congenital heart defects in children]{"entity": "condition", "value": "Congenital heart defects in children"}
+    - [Congenital heart disease in adults]{"entity": "condition", "value": "Congenital heart disease in adults"}
+    - [Congenital mitral valve anomalies]{"entity": "condition", "value": "Congenital mitral valve anomalies"}
+    - [Congenital myasthenic syndromes]{"entity": "condition", "value": "Congenital myasthenic syndromes"}
+    - [Conjoined twins]{"entity": "condition", "value": "Conjoined twins"}
+    - [Constipation]{"entity": "condition", "value": "Constipation"}
+    - [Constipation in children]{"entity": "condition", "value": "Constipation in children"}
+    - [Contact dermatitis]{"entity": "condition", "value": "Contact dermatitis"}
+    - [COPD]{"entity": "condition", "value": "COPD"}
+    - [Corns and calluses]{"entity": "condition", "value": "Corns and calluses"}
+    - [Coronary artery disease]{"entity": "condition", "value": "Coronary artery disease"}
+    - [Coronavirus disease 2019]{"entity": "condition", "value": "Coronavirus disease 2019"}
+    - [COVID 19]{"entity": "condition", "value": "Coronavirus disease 2019"}
+    - [COVID]{"entity": "condition", "value": "Coronavirus disease 2019"}
+    - [Coronavirus]{"entity": "condition", "value": "Coronavirus disease 2019"}
+    - [Corticobasal degeneration]{"entity": "condition", "value": "Corticobasal degeneration"}
+    - [corticobasal syndrome]{"entity": "condition", "value": "Corticobasal degeneration"}
+    - [Costochondritis]{"entity": "condition", "value": "Costochondritis"}
+    - [Cough headaches]{"entity": "condition", "value": "Cough headaches"}
+    - [Cradle cap]{"entity": "condition", "value": "Cradle cap"}
+    - [Craniopharyngioma]{"entity": "condition", "value": "Craniopharyngioma"}
+    - [Craniosynostosis]{"entity": "condition", "value": "Craniosynostosis"}
+    - [Creutzfeldt Jakob disease]{"entity": "condition", "value": "Creutzfeldt-Jakob disease"}
+    - [Crohn's disease]{"entity": "condition", "value": "Crohn's disease"}
+    - [Croup]{"entity": "condition", "value": "Croup"}
+    - [Cryoglobulinemia]{"entity": "condition", "value": "Cryoglobulinemia"}
+    - [CSF leak]{"entity": "condition", "value": "CSF leak"}
+    - [Cerebrospinal fluid leak]{"entity": "condition", "value": "CSF leak"}
+    - [Cushing syndrome]{"entity": "condition", "value": "Cushing syndrome"}
+    - [Cutaneous B cell lymphoma]{"entity": "condition", "value": "Cutaneous B-cell lymphoma"}
+    - [Cutaneous T cell lymphoma]{"entity": "condition", "value": "Cutaneous T-cell lymphoma"}
+    - [Cyclic vomiting syndrome]{"entity": "condition", "value": "Cyclic vomiting syndrome"}
+    - [Cyclothymia]{"entity": "condition", "value": "Cyclothymia"}
+    - [cyclothymic disorder]{"entity": "condition", "value": "Cyclothymia"}
+    - [Cystic fibrosis]{"entity": "condition", "value": "Cystic fibrosis"}
+    - [Cystitis]{"entity": "condition", "value": "Cystitis"}
+    - [Cytomegalovirus]{"entity": "condition", "value": "Cytomegalovirus infection"}
+    - [CMV infection]{"entity": "condition", "value": "Cytomegalovirus infection"}
+    - [Dandruff]{"entity": "condition", "value": "Dandruff"}
+    - [De Quervain tenosynovitis]{"entity": "condition", "value": "De Quervain tenosynovitis"}
+    - [Deep vein thrombosis]{"entity": "condition", "value": "Deep vein thrombosis"}
+    - [DVT]{"entity": "condition", "value": "Deep vein thrombosis"}
+    - [Dehydration]{"entity": "condition", "value": "Dehydration"}
+    - [Delayed ejaculation]{"entity": "condition", "value": "Delayed ejaculation"}
+    - [Delayed sleep phase]{"entity": "condition", "value": "Delayed sleep phase"}
+    - [Delirium]{"entity": "condition", "value": "Delirium"}
+    - [Dementia]{"entity": "condition", "value": "Dementia"}
+    - [Dengue fever]{"entity": "condition", "value": "Dengue fever"}
+    - [Depersonalization derealization disorder]{"entity": "condition", "value": "Depersonalization-derealization disorder"}
+    - [Depression]{"entity": "condition", "value": "Depression"}
+    - [major depressive disorder]{"entity": "condition", "value": "Depression"}
+    - [Dermatitis]{"entity": "condition", "value": "Dermatitis"}
+    - [Dermatofibrosarcoma protuberans]{"entity": "condition", "value": "Dermatofibrosarcoma protuberans"}
+    - [Dermatographia]{"entity": "condition", "value": "Dermatographia"}
+    - [Dermatographism]{"entity": "condition", "value": "Dermatographia"}
+    - [Dermatomyositis]{"entity": "condition", "value": "Dermatomyositis"}
+    - [Desmoid tumors]{"entity": "condition", "value": "Desmoid tumors"}
+    - [Desmoplastic small round cell tumors]{"entity": "condition", "value": "Desmoplastic small round cell tumors"}
+    - [Deviated septum]{"entity": "condition", "value": "Deviated septum"}
+    - [Diabetes]{"entity": "condition", "value": "Diabetes"}
+    - [Diabetes insipidus]{"entity": "condition", "value": "Diabetes insipidus"}
+    - [Diabetic coma]{"entity": "condition", "value": "Diabetic coma"}
+    - [Diabetic hypoglycemia]{"entity": "condition", "value": "Diabetic hypoglycemia"}
+    - [Diabetic ketoacidosis]{"entity": "condition", "value": "Diabetic ketoacidosis"}
+    - [Diabetic nephropathy]{"entity": "condition", "value": "Diabetic nephropathy"}
+    - [kidney disease]{"entity": "condition", "value": "Diabetic nephropathy"}
+    - [Diabetic neuropathy]{"entity": "condition", "value": "Diabetic neuropathy"}
+    - [Diabetic retinopathy]{"entity": "condition", "value": "Diabetic retinopathy"}
+    - [Diaper rash]{"entity": "condition", "value": "Diaper rash"}
+    - [Diarrhea]{"entity": "condition", "value": "Diarrhea"}
+    - [DiGeorge syndrome]{"entity": "condition", "value": "DiGeorge syndrome"}
+    - [22q11.2 deletion syndrome]{"entity": "condition", "value": "DiGeorge syndrome"}
+    - [Dilated cardiomyopathy]{"entity": "condition", "value": "Dilated cardiomyopathy"}
+    - [Diphtheria]{"entity": "condition", "value": "Diphtheria"}
+    - [Dislocated shoulder]{"entity": "condition", "value": "Dislocated shoulder"}
+    - [Dissociative disorders]{"entity": "condition", "value": "Dissociative disorders"}
+    - [Diverticulitis]{"entity": "condition", "value": "Diverticulitis"}
+    - [Dizziness]{"entity": "condition", "value": "Dizziness"}
+    - [Double uterus]{"entity": "condition", "value": "Double uterus"}
+    - [Double outlet right ventricle]{"entity": "condition", "value": "Double-outlet right ventricle"}
+    - [Down syndrome]{"entity": "condition", "value": "Down syndrome"}
+    - [Dressler syndrome]{"entity": "condition", "value": "Dressler syndrome"}
+    - [Drug addiction]{"entity": "condition", "value": "Drug addiction"}
+    - [substance use disorder]{"entity": "condition", "value": "Drug addiction"}
+    - [Drug allergy]{"entity": "condition", "value": "Drug allergy"}
+    - [Dry eyes]{"entity": "condition", "value": "Dry eyes"}
+    - [Dry macular degeneration]{"entity": "condition", "value": "Dry macular degeneration"}
+    - [Dry mouth]{"entity": "condition", "value": "Dry mouth"}
+    - [Dry skin]{"entity": "condition", "value": "Dry skin"}
+    - [Dry socket]{"entity": "condition", "value": "Dry socket"}
+    - [Ductal carcinoma in situ]{"entity": "condition", "value": "Ductal carcinoma in situ"}
+    - [DCIS]{"entity": "condition", "value": "Ductal carcinoma in situ"}
+    - [Dumping syndrome]{"entity": "condition", "value": "Dumping syndrome"}
+    - [Dupuytren contracture]{"entity": "condition", "value": "Dupuytren contracture"}
+    - [Dural arteriovenous fistulas]{"entity": "condition", "value": "Dural arteriovenous fistulas"}
+    - [Dust mite allergy]{"entity": "condition", "value": "Dust mite allergy"}
+    - [Dwarfism]{"entity": "condition", "value": "Dwarfism"}
+    - [Dysarthria]{"entity": "condition", "value": "Dysarthria"}
+    - [Dyshidrosis]{"entity": "condition", "value": "Dyshidrosis"}
+    - [Dyslexia]{"entity": "condition", "value": "Dyslexia"}
+    - [Dysphagia]{"entity": "condition", "value": "Dysphagia"}
+    - [Dystonia]{"entity": "condition", "value": "Dystonia"}
+    - [E. coli]{"entity": "condition", "value": "E. coli"}
+    - [Ear infection]{"entity": "condition", "value": "Ear infection"}
+    - [middle ear]{"entity": "condition", "value": "Ear infection"}
+    - [Earwax blockage]{"entity": "condition", "value": "Earwax blockage"}
+    - [Eating disorders]{"entity": "condition", "value": "Eating disorders"}
+    - [Ebstein anomaly]{"entity": "condition", "value": "Ebstein anomaly"}
+    - [Ectopic pregnancy]{"entity": "condition", "value": "Ectopic pregnancy"}
+    - [Ectropion]{"entity": "condition", "value": "Ectropion"}
+    - [Edema]{"entity": "condition", "value": "Edema"}
+    - [Egg allergy]{"entity": "condition", "value": "Egg allergy"}
+    - [Ehlers Danlos syndrome]{"entity": "condition", "value": "Ehlers-Danlos syndrome"}
+    - [Ehrlichiosis and anaplasmosis]{"entity": "condition", "value": "Ehrlichiosis and anaplasmosis"}
+    - [Eisenmenger syndrome]{"entity": "condition", "value": "Eisenmenger syndrome"}
+    - [Elevated blood pressure]{"entity": "condition", "value": "Elevated blood pressure"}
+    - [Embryonal tumors]{"entity": "condition", "value": "Embryonal tumors"}
+    - [Emphysema]{"entity": "condition", "value": "Emphysema"}
+    - [Encephalitis]{"entity": "condition", "value": "Encephalitis"}
+    - [Encopresis]{"entity": "condition", "value": "Encopresis"}
+    - [Endocarditis]{"entity": "condition", "value": "Endocarditis"}
+    - [Endometrial cancer]{"entity": "condition", "value": "Endometrial cancer"}
+    - [Endometriosis]{"entity": "condition", "value": "Endometriosis"}
+    - [End stage renal disease]{"entity": "condition", "value": "End-stage renal disease"}
+    - [Enlarged breasts in men]{"entity": "condition", "value": "Enlarged breasts in men"}
+    - [gynecomastia]{"entity": "condition", "value": "Enlarged breasts in men"}
+    - [Enlarged heart]{"entity": "condition", "value": "Enlarged heart"}
+    - [Enlarged liver]{"entity": "condition", "value": "Enlarged liver"}
+    - [Enlarged spleen]{"entity": "condition", "value": "Enlarged spleen"}
+    - [splenomegaly]{"entity": "condition", "value": "Enlarged spleen"}
+    - [Entropion]{"entity": "condition", "value": "Entropion"}
+    - [Eosinophilic esophagitis]{"entity": "condition", "value": "Eosinophilic esophagitis"}
+    - [Ependymoma]{"entity": "condition", "value": "Ependymoma"}
+    - [Epidermoid cysts]{"entity": "condition", "value": "Epidermoid cysts"}
+    - [Epidermolysis bullosa]{"entity": "condition", "value": "Epidermolysis bullosa"}
+    - [Epididymitis]{"entity": "condition", "value": "Epididymitis"}
+    - [Epiglottitis]{"entity": "condition", "value": "Epiglottitis"}
+    - [Epilepsy]{"entity": "condition", "value": "Epilepsy"}
+    - [Epithelioid sarcoma]{"entity": "condition", "value": "Epithelioid sarcoma"}
+    - [Erectile dysfunction]{"entity": "condition", "value": "Erectile dysfunction"}
+    - [Esophageal cancer]{"entity": "condition", "value": "Esophageal cancer"}
+    - [Esophageal spasms]{"entity": "condition", "value": "Esophageal spasms"}
+    - [Esophageal varices]{"entity": "condition", "value": "Esophageal varices"}
+    - [Esophagitis]{"entity": "condition", "value": "Esophagitis"}
+    - [Essential tremor]{"entity": "condition", "value": "Essential tremor"}
+    - [Esthesioneuroblastoma]{"entity": "condition", "value": "Esthesioneuroblastoma"}
+    - [Ewing sarcoma]{"entity": "condition", "value": "Ewing sarcoma"}
+    - [Exercise headaches]{"entity": "condition", "value": "Exercise headaches"}
+    - [Exercise induced asthma]{"entity": "condition", "value": "Exercise-induced asthma"}
+    - [Eye floaters]{"entity": "condition", "value": "Eye floaters"}
+    - [Eye melanoma]{"entity": "condition", "value": "Eye melanoma"}
+    - [Eyestrain]{"entity": "condition", "value": "Eyestrain"}
+    - [Factitious disorder]{"entity": "condition", "value": "Factitious disorder"}
+    - [Factor V Leiden]{"entity": "condition", "value": "Factor V Leiden"}
+    - [Familial adenomatous polyposis]{"entity": "condition", "value": "Familial adenomatous polyposis"}
+    - [Familial hypercholesterolemia]{"entity": "condition", "value": "Familial hypercholesterolemia"}
+    - [Familial Mediterranean fever]{"entity": "condition", "value": "Familial Mediterranean fever"}
+    - [Farsightedness]{"entity": "condition", "value": "Farsightedness"}
+    - [Febrile seizure]{"entity": "condition", "value": "Febrile seizure"}
+    - [Fecal incontinence]{"entity": "condition", "value": "Fecal incontinence"}
+    - [Female infertility]{"entity": "condition", "value": "Female infertility"}
+    - [Female sexual dysfunction]{"entity": "condition", "value": "Female sexual dysfunction"}
+    - [Fetal alcohol syndrome]{"entity": "condition", "value": "Fetal alcohol syndrome"}
+    - [Fetal macrosomia]{"entity": "condition", "value": "Fetal macrosomia"}
+    - [Fever]{"entity": "condition", "value": "Fever"}
+    - [Fibroadenoma]{"entity": "condition", "value": "Fibroadenoma"}
+    - [Fibrocystic breasts]{"entity": "condition", "value": "Fibrocystic breasts"}
+    - [Fibromuscular dysplasia]{"entity": "condition", "value": "Fibromuscular dysplasia"}
+    - [Fibromyalgia]{"entity": "condition", "value": "Fibromyalgia"}
+    - [Flatfeet]{"entity": "condition", "value": "Flatfeet"}
+    - [Floor of the mouth cancer]{"entity": "condition", "value": "Floor of the mouth cancer"}
+    - [Focal segmental glomerulosclerosis]{"entity": "condition", "value": "Focal segmental glomerulosclerosis"}
+    - [FSGS]{"entity": "condition", "value": "Focal segmental glomerulosclerosis"}
+    - [Folliculitis]{"entity": "condition", "value": "Folliculitis"}
+    - [Food allergy]{"entity": "condition", "value": "Food allergy"}
+    - [Food poisoning]{"entity": "condition", "value": "Food poisoning"}
+    - [Foot drop]{"entity": "condition", "value": "Foot drop"}
+    - [Frontal lobe seizures]{"entity": "condition", "value": "Frontal lobe seizures"}
+    - [Frontotemporal dementia]{"entity": "condition", "value": "Frontotemporal dementia"}
+    - [Frostbite]{"entity": "condition", "value": "Frostbite"}
+    - [Frozen shoulder]{"entity": "condition", "value": "Frozen shoulder"}
+    - [Fuchs' dystrophy]{"entity": "condition", "value": "Fuchs' dystrophy"}
+    - [Functional dyspepsia]{"entity": "condition", "value": "Functional dyspepsia"}
+    - [Functional neurologic disorder]{"entity": "condition", "value": "Functional neurologic disorder"}
+    - [conversion disorder]{"entity": "condition", "value": "Functional neurologic disorder"}
+    - [Galactorrhea]{"entity": "condition", "value": "Galactorrhea"}
+    - [Gallbladder cancer]{"entity": "condition", "value": "Gallbladder cancer"}
+    - [Gallstones]{"entity": "condition", "value": "Gallstones"}
+    - [Ganglion cyst]{"entity": "condition", "value": "Ganglion cyst"}
+    - [Gangrene]{"entity": "condition", "value": "Gangrene"}
+    - [Gas and gas pains]{"entity": "condition", "value": "Gas and gas pains"}
+    - [Gastritis]{"entity": "condition", "value": "Gastritis"}
+    - [Gastroesophageal reflux disease]{"entity": "condition", "value": "Gastroesophageal reflux disease"}
+    - [GERD]{"entity": "condition", "value": "Gastroesophageal reflux disease"}
+    - [Gastrointestinal bleeding]{"entity": "condition", "value": "Gastrointestinal bleeding"}
+    - [Gastrointestinal stromal tumor]{"entity": "condition", "value": "Gastrointestinal stromal tumor"}
+    - [GIST]{"entity": "condition", "value": "Gastrointestinal stromal tumor"}
+    - [Gastroparesis]{"entity": "condition", "value": "Gastroparesis"}
+    - [Gaucher disease]{"entity": "condition", "value": "Gaucher disease"}
+    - [Gender dysphoria]{"entity": "condition", "value": "Gender dysphoria"}
+    - [Generalized anxiety disorder]{"entity": "condition", "value": "Generalized anxiety disorder"}
+    - [Genital herpes]{"entity": "condition", "value": "Genital herpes"}
+    - [Genital warts]{"entity": "condition", "value": "Genital warts"}
+    - [Geographic tongue]{"entity": "condition", "value": "Geographic tongue"}
+    - [Germ cell tumors]{"entity": "condition", "value": "Germ cell tumors"}
+    - [Gestational diabetes]{"entity": "condition", "value": "Gestational diabetes"}
+    - [Giant cell arteritis]{"entity": "condition", "value": "Giant cell arteritis"}
+    - [Giardia infection]{"entity": "condition", "value": "Giardia infection"}
+    - [giardiasis]{"entity": "condition", "value": "Giardia infection"}
+    - [Gilbert syndrome]{"entity": "condition", "value": "Gilbert syndrome"}
+    - [Gingivitis]{"entity": "condition", "value": "Gingivitis"}
+    - [Glaucoma]{"entity": "condition", "value": "Glaucoma"}
+    - [Glioblastoma]{"entity": "condition", "value": "Glioblastoma"}
+    - [Glioma]{"entity": "condition", "value": "Glioma"}
+    - [Glomerulonephritis]{"entity": "condition", "value": "Glomerulonephritis"}
+    - [Goiter]{"entity": "condition", "value": "Goiter"}
+    - [Golfer's elbow]{"entity": "condition", "value": "Golfer's elbow"}
+    - [Gonorrhea]{"entity": "condition", "value": "Gonorrhea"}
+    - [Gout]{"entity": "condition", "value": "Gout"}
+    - [Granuloma annulare]{"entity": "condition", "value": "Granuloma annulare"}
+    - [Granulomatosis with polyangiitis]{"entity": "condition", "value": "Granulomatosis with polyangiitis"}
+    - [Graves' disease]{"entity": "condition", "value": "Graves' disease"}
+    - [Greenstick fractures]{"entity": "condition", "value": "Greenstick fractures"}
+    - [Group B strep disease]{"entity": "condition", "value": "Group B strep disease"}
+    - [Growing pains]{"entity": "condition", "value": "Growing pains"}
+    - [Growth plate fractures]{"entity": "condition", "value": "Growth plate fractures"}
+    - [Guillain Barre syndrome]{"entity": "condition", "value": "Guillain-Barre syndrome"}
+    - [H1N1 flu]{"entity": "condition", "value": "H1N1 flu"}
+    - [swine flu]{"entity": "condition", "value": "H1N1 flu"}
+    - [Hair loss]{"entity": "condition", "value": "Hair loss"}
+    - [Hairy cell leukemia]{"entity": "condition", "value": "Hairy cell leukemia"}
+    - [Hammertoe and mallet toe]{"entity": "condition", "value": "Hammertoe and mallet toe"}
+    - [Hamstring injury]{"entity": "condition", "value": "Hamstring injury"}
+    - [Hand foot and mouth disease]{"entity": "condition", "value": "Hand-foot-and-mouth disease"}
+    - [Hangovers]{"entity": "condition", "value": "Hangovers"}
+    - [Hantavirus pulmonary syndrome]{"entity": "condition", "value": "Hantavirus pulmonary syndrome"}
+    - [Hashimoto's disease]{"entity": "condition", "value": "Hashimoto's disease"}
+    - [Hay fever]{"entity": "condition", "value": "Hay fever"}
+    - [Head and neck cancers]{"entity": "condition", "value": "Head and neck cancers"}
+    - [Head lice]{"entity": "condition", "value": "Head lice"}
+    - [Headaches in children]{"entity": "condition", "value": "Headaches in children"}
+    - [Hearing loss]{"entity": "condition", "value": "Hearing loss"}
+    - [Heart arrhythmia]{"entity": "condition", "value": "Heart arrhythmia"}
+    - [Heart attack]{"entity": "condition", "value": "Heart attack"}
+    - [Heart disease]{"entity": "condition", "value": "Heart disease"}
+    - [Heart failure]{"entity": "condition", "value": "Heart failure"}
+    - [Heart murmurs]{"entity": "condition", "value": "Heart murmurs"}
+    - [Heart palpitations]{"entity": "condition", "value": "Heart palpitations"}
+    - [Heart valve disease]{"entity": "condition", "value": "Heart valve disease"}
+    - [Heartburn]{"entity": "condition", "value": "Heartburn"}
+    - [Heat exhaustion]{"entity": "condition", "value": "Heat exhaustion"}
+    - [Heat rash]{"entity": "condition", "value": "Heat rash"}
+    - [Heatstroke]{"entity": "condition", "value": "Heatstroke"}
+    - [Helicobacter pylori]{"entity": "condition", "value": "Helicobacter pylori infection"}
+    - [H. pylori infection]{"entity": "condition", "value": "Helicobacter pylori infection"}
+    - [Hemangioma]{"entity": "condition", "value": "Hemangioma"}
+    - [Hemifacial spasm]{"entity": "condition", "value": "Hemifacial spasm"}
+    - [Hemochromatosis]{"entity": "condition", "value": "Hemochromatosis"}
+    - [Hemolytic uremic syndrome]{"entity": "condition", "value": "Hemolytic uremic syndrome"}
+    - [HUS]{"entity": "condition", "value": "Hemolytic uremic syndrome"}
+    - [Hemophilia]{"entity": "condition", "value": "Hemophilia"}
+    - [Hemorrhoids]{"entity": "condition", "value": "Hemorrhoids"}
+    - [Henoch Schonlein purpura]{"entity": "condition", "value": "Henoch-Schonlein purpura"}
+    - [Hepatitis A]{"entity": "condition", "value": "Hepatitis A"}
+    - [Hepatitis B]{"entity": "condition", "value": "Hepatitis B"}
+    - [Hepatitis C]{"entity": "condition", "value": "Hepatitis C"}
+    - [Hepatocellular carcinoma]{"entity": "condition", "value": "Hepatocellular carcinoma"}
+    - [Hepatopulmonary syndrome]{"entity": "condition", "value": "Hepatopulmonary syndrome"}
+    - [Hereditary hemorrhagic telangiectasia]{"entity": "condition", "value": "Hereditary hemorrhagic telangiectasia"}
+    - [Herniated disk]{"entity": "condition", "value": "Herniated disk"}
+    - [Hiatal hernia]{"entity": "condition", "value": "Hiatal hernia"}
+    - [Hiccups]{"entity": "condition", "value": "Hiccups"}
+    - [Hidradenitis suppurativa]{"entity": "condition", "value": "Hidradenitis suppurativa"}
+    - [High blood pressure]{"entity": "condition", "value": "High blood pressure"}
+    - [hypertension]{"entity": "condition", "value": "High blood pressure"}
+    - [High blood pressure in children]{"entity": "condition", "value": "High blood pressure in children"}
+    - [High cholesterol]{"entity": "condition", "value": "High cholesterol"}
+    - [Hilar cholangiocarcinoma]{"entity": "condition", "value": "Hilar cholangiocarcinoma"}
+    - [Hip dysplasia]{"entity": "condition", "value": "Hip dysplasia"}
+    - [Hip fracture]{"entity": "condition", "value": "Hip fracture"}
+    - [Hip labral tear]{"entity": "condition", "value": "Hip labral tear"}
+    - [Hirschsprung's disease]{"entity": "condition", "value": "Hirschsprung's disease"}
+    - [Hirsutism]{"entity": "condition", "value": "Hirsutism"}
+    - [Histoplasmosis]{"entity": "condition", "value": "Histoplasmosis"}
+    - [HIV]{"entity": "condition", "value": "HIV/AIDS"}
+    - [AIDS]{"entity": "condition", "value": "HIV/AIDS"}
+    - [Hives and angioedema]{"entity": "condition", "value": "Hives and angioedema"}
+    - [Hoarding disorder]{"entity": "condition", "value": "Hoarding disorder"}
+    - [Hodgkin's lymphoma]{"entity": "condition", "value": "Hodgkin's lymphoma"}
+    - [Hodgkin's disease]{"entity": "condition", "value": "Hodgkin's lymphoma"}
+    - [Horner syndrome]{"entity": "condition", "value": "Horner syndrome"}
+    - [Hot flashes]{"entity": "condition", "value": "Hot flashes"}
+    - [HPV infection]{"entity": "condition", "value": "HPV infection"}
+    - [Huntington's disease]{"entity": "condition", "value": "Huntington's disease"}
+    - [Hurthle cell cancer]{"entity": "condition", "value": "Hurthle cell cancer"}
+    - [Hydrocele]{"entity": "condition", "value": "Hydrocele"}
+    - [Hydrocephalus]{"entity": "condition", "value": "Hydrocephalus"}
+    - [Hydronephrosis]{"entity": "condition", "value": "Hydronephrosis"}
+    - [Hypercalcemia]{"entity": "condition", "value": "Hypercalcemia"}
+    - [Hypereosinophilic syndrome]{"entity": "condition", "value": "Hypereosinophilic syndrome"}
+    - [Hyperglycemia in diabetes]{"entity": "condition", "value": "Hyperglycemia in diabetes"}
+    - [Hyperhidrosis]{"entity": "condition", "value": "Hyperhidrosis"}
+    - [Hyperoxaluria and oxalosis]{"entity": "condition", "value": "Hyperoxaluria and oxalosis"}
+    - [Hyperparathyroidism]{"entity": "condition", "value": "Hyperparathyroidism"}
+    - [Hyperthyroidism]{"entity": "condition", "value": "Hyperthyroidism"}
+    - [overactive thyroid]{"entity": "condition", "value": "Hyperthyroidism"}
+    - [Hypertrophic cardiomyopathy]{"entity": "condition", "value": "Hypertrophic cardiomyopathy"}
+    - [Hypoglycemia]{"entity": "condition", "value": "Hypoglycemia"}
+    - [Hyponatremia]{"entity": "condition", "value": "Hyponatremia"}
+    - [Hypoparathyroidism]{"entity": "condition", "value": "Hypoparathyroidism"}
+    - [Hypopituitarism]{"entity": "condition", "value": "Hypopituitarism"}
+    - [Hypoplastic left heart syndrome]{"entity": "condition", "value": "Hypoplastic left heart syndrome"}
+    - [Hypospadias]{"entity": "condition", "value": "Hypospadias"}
+    - [Hypothermia]{"entity": "condition", "value": "Hypothermia"}
+    - [Hypothyroidism]{"entity": "condition", "value": "Hypothyroidism"}
+    - [underactive thyroid]{"entity": "condition", "value": "Hypothyroidism"}
+    - [Idiopathic hypersomnia]{"entity": "condition", "value": "Idiopathic hypersomnia"}
+    - [IgA nephropathy]{"entity": "condition", "value": "IgA nephropathy"}
+    - [Berger disease]{"entity": "condition", "value": "IgA nephropathy"}
+    - [Illness anxiety disorder]{"entity": "condition", "value": "Illness anxiety disorder"}
+    - [Immune thrombocytopenia]{"entity": "condition", "value": "Immune thrombocytopenia"}
+    - [ITP]{"entity": "condition", "value": "Immune thrombocytopenia"}
+    - [Impacted wisdom teeth]{"entity": "condition", "value": "Impacted wisdom teeth"}
+    - [Impetigo]{"entity": "condition", "value": "Impetigo"}
+    - [Incompetent cervix]{"entity": "condition", "value": "Incompetent cervix"}
+    - [Indigestion]{"entity": "condition", "value": "Indigestion"}
+    - [Infant jaundice]{"entity": "condition", "value": "Infant jaundice"}
+    - [Infant reflux]{"entity": "condition", "value": "Infant reflux"}
+    - [Infectious diseases]{"entity": "condition", "value": "Infectious diseases"}
+    - [Infertility]{"entity": "condition", "value": "Infertility"}
+    - [Inflammatory bowel disease]{"entity": "condition", "value": "Inflammatory bowel disease"}
+    - [IBD]{"entity": "condition", "value": "Inflammatory bowel disease"}
+    - [Inflammatory breast cancer]{"entity": "condition", "value": "Inflammatory breast cancer"}
+    - [Influenza]{"entity": "condition", "value": "Influenza"}
+    - [flu]{"entity": "condition", "value": "Influenza"}
+    - [Ingrown hair]{"entity": "condition", "value": "Ingrown hair"}
+    - [Ingrown toenails]{"entity": "condition", "value": "Ingrown toenails"}
+    - [Inguinal hernia]{"entity": "condition", "value": "Inguinal hernia"}
+    - [Inherited metabolic disorders]{"entity": "condition", "value": "Inherited metabolic disorders"}
+    - [Insomnia]{"entity": "condition", "value": "Insomnia"}
+    - [Intermittent explosive disorder]{"entity": "condition", "value": "Intermittent explosive disorder"}
+    - [Interstitial cystitis]{"entity": "condition", "value": "Interstitial cystitis"}
+    - [Interstitial lung disease]{"entity": "condition", "value": "Interstitial lung disease"}
+    - [Intestinal ischemia]{"entity": "condition", "value": "Intestinal ischemia"}
+    - [Intestinal obstruction]{"entity": "condition", "value": "Intestinal obstruction"}
+    - [Intracranial hematoma]{"entity": "condition", "value": "Intracranial hematoma"}
+    - [Intracranial venous malformations]{"entity": "condition", "value": "Intracranial venous malformations"}
+    - [Intussusception]{"entity": "condition", "value": "Intussusception"}
+    - [Invasive lobular carcinoma]{"entity": "condition", "value": "Invasive lobular carcinoma"}
+    - [Iritis]{"entity": "condition", "value": "Iritis"}
+    - [Iron deficiency anemia]{"entity": "condition", "value": "Iron deficiency anemia"}
+    - [Irritable bowel syndrome]{"entity": "condition", "value": "Irritable bowel syndrome"}
+    - [Ischemic colitis]{"entity": "condition", "value": "Ischemic colitis"}
+    - [Itchy skin]{"entity": "condition", "value": "Itchy skin"}
+    - [pruritus]{"entity": "condition", "value": "Itchy skin"}
+    - [Jaw tumors and cysts]{"entity": "condition", "value": "Jaw tumors and cysts"}
+    - [Jellyfish stings]{"entity": "condition", "value": "Jellyfish stings"}
+    - [Jet lag disorder]{"entity": "condition", "value": "Jet lag disorder"}
+    - [Jock itch]{"entity": "condition", "value": "Jock itch"}
+    - [Juvenile idiopathic arthritis]{"entity": "condition", "value": "Juvenile idiopathic arthritis"}
+    - [Kaposi's sarcoma]{"entity": "condition", "value": "Kaposi's sarcoma"}
+    - [Kawasaki disease]{"entity": "condition", "value": "Kawasaki disease"}
+    - [Keloid scar]{"entity": "condition", "value": "Keloid scar"}
+    - [Keratitis]{"entity": "condition", "value": "Keratitis"}
+    - [Keratoconus]{"entity": "condition", "value": "Keratoconus"}
+    - [Keratosis pilaris]{"entity": "condition", "value": "Keratosis pilaris"}
+    - [Kidney cancer]{"entity": "condition", "value": "Kidney cancer"}
+    - [Kidney cysts]{"entity": "condition", "value": "Kidney cysts"}
+    - [Kidney infection]{"entity": "condition", "value": "Kidney infection"}
+    - [Kidney stones]{"entity": "condition", "value": "Kidney stones"}
+    - [Kleptomania]{"entity": "condition", "value": "Kleptomania"}
+    - [Klinefelter syndrome]{"entity": "condition", "value": "Klinefelter syndrome"}
+    - [Klippel Trenaunay syndrome]{"entity": "condition", "value": "Klippel-Trenaunay syndrome"}
+    - [Knee bursitis]{"entity": "condition", "value": "Knee bursitis"}
+    - [Knee pain]{"entity": "condition", "value": "Knee pain"}
+    - [Kyphosis]{"entity": "condition", "value": "Kyphosis"}
+    - [Lactose intolerance]{"entity": "condition", "value": "Lactose intolerance"}
+    - [Laryngitis]{"entity": "condition", "value": "Laryngitis"}
+    - [Latex allergy]{"entity": "condition", "value": "Latex allergy"}
+    - [Lazy eye]{"entity": "condition", "value": "Lazy eye"}
+    - [amblyopia]{"entity": "condition", "value": "Lazy eye"}
+    - [Lead poisoning]{"entity": "condition", "value": "Lead poisoning"}
+    - [Left ventricular hypertrophy]{"entity": "condition", "value": "Left ventricular hypertrophy"}
+    - [Legg Calve Perthes disease]{"entity": "condition", "value": "Legg-Calve-Perthes disease"}
+    - [Legionnaires' disease]{"entity": "condition", "value": "Legionnaires' disease"}
+    - [Leiomyosarcoma]{"entity": "condition", "value": "Leiomyosarcoma"}
+    - [Leukemia]{"entity": "condition", "value": "Leukemia"}
+    - [Leukoplakia]{"entity": "condition", "value": "Leukoplakia"}
+    - [Lewy body dementia]{"entity": "condition", "value": "Lewy body dementia"}
+    - [Lice]{"entity": "condition", "value": "Lice"}
+    - [Lichen planus]{"entity": "condition", "value": "Lichen planus"}
+    - [Lichen sclerosus]{"entity": "condition", "value": "Lichen sclerosus"}
+    - [Lip cancer]{"entity": "condition", "value": "Lip cancer"}
+    - [Lipoma]{"entity": "condition", "value": "Lipoma"}
+    - [Liposarcoma]{"entity": "condition", "value": "Liposarcoma"}
+    - [Listeria infection]{"entity": "condition", "value": "Listeria infection"}
+    - [Liver cancer]{"entity": "condition", "value": "Liver cancer"}
+    - [Liver disease]{"entity": "condition", "value": "Liver disease"}
+    - [Liver hemangioma]{"entity": "condition", "value": "Liver hemangioma"}
+    - [Lobular carcinoma in situ]{"entity": "condition", "value": "Lobular carcinoma in situ"}
+    - [LCIS]{"entity": "condition", "value": "Lobular carcinoma in situ"}
+    - [Long QT syndrome]{"entity": "condition", "value": "Long QT syndrome"}
+    - [Low blood pressure]{"entity": "condition", "value": "Low blood pressure"}
+    - [hypotension]{"entity": "condition", "value": "Low blood pressure"}
+    - [Low sex drive in women]{"entity": "condition", "value": "Low sex drive in women"}
+    - [Low sperm count]{"entity": "condition", "value": "Low sperm count"}
+    - [Lung cancer]{"entity": "condition", "value": "Lung cancer"}
+    - [Lupus]{"entity": "condition", "value": "Lupus"}
+    - [Lupus nephritis]{"entity": "condition", "value": "Lupus nephritis"}
+    - [Lyme disease]{"entity": "condition", "value": "Lyme disease"}
+    - [Lymphedema]{"entity": "condition", "value": "Lymphedema"}
+    - [Lymphoma]{"entity": "condition", "value": "Lymphoma"}
+    - [Lynch syndrome]{"entity": "condition", "value": "Lynch syndrome"}
+    - [Malaria]{"entity": "condition", "value": "Malaria"}
+    - [Male breast cancer]{"entity": "condition", "value": "Male breast cancer"}
+    - [Male hypogonadism]{"entity": "condition", "value": "Male hypogonadism"}
+    - [Male infertility]{"entity": "condition", "value": "Male infertility"}
+    - [Malignant hyperthermia]{"entity": "condition", "value": "Malignant hyperthermia"}
+    - [Malignant peripheral nerve sheath tumors]{"entity": "condition", "value": "Malignant peripheral nerve sheath tumors"}
+    - [Mammary duct ectasia]{"entity": "condition", "value": "Mammary duct ectasia"}
+    - [Marfan syndrome]{"entity": "condition", "value": "Marfan syndrome"}
+    - [Mastitis]{"entity": "condition", "value": "Mastitis"}
+    - [MCAD deficiency]{"entity": "condition", "value": "MCAD deficiency"}
+    - [Measles]{"entity": "condition", "value": "Measles"}
+    - [Median arcuate ligament syndrome]{"entity": "condition", "value": "Median arcuate ligament syndrome"}
+    - [MALS]{"entity": "condition", "value": "Median arcuate ligament syndrome"}
+    - [Medication overuse headaches]{"entity": "condition", "value": "Medication overuse headaches"}
+    - [Medulloblastoma]{"entity": "condition", "value": "Medulloblastoma"}
+    - [Melanoma]{"entity": "condition", "value": "Melanoma"}
+    - [Meniere's disease]{"entity": "condition", "value": "Meniere's disease"}
+    - [Meningioma]{"entity": "condition", "value": "Meningioma"}
+    - [Meningitis]{"entity": "condition", "value": "Meningitis"}
+    - [Menopause]{"entity": "condition", "value": "Menopause"}
+    - [Menorrhagia]{"entity": "condition", "value": "Menorrhagia"}
+    - [heavy menstrual bleeding]{"entity": "condition", "value": "Menorrhagia"}
+    - [Menstrual cramps]{"entity": "condition", "value": "Menstrual cramps"}
+    - [Mental illness]{"entity": "condition", "value": "Mental illness"}
+    - [Meralgia paresthetica]{"entity": "condition", "value": "Meralgia paresthetica"}
+    - [Merkel cell carcinoma]{"entity": "condition", "value": "Merkel cell carcinoma"}
+    - [Mesenteric ischemia]{"entity": "condition", "value": "Mesenteric ischemia"}
+    - [Mesenteric lymphadenitis]{"entity": "condition", "value": "Mesenteric lymphadenitis"}
+    - [Mesothelioma]{"entity": "condition", "value": "Mesothelioma"}
+    - [Metabolic syndrome]{"entity": "condition", "value": "Metabolic syndrome"}
+    - [Metachromatic leukodystrophy]{"entity": "condition", "value": "Metachromatic leukodystrophy"}
+    - [Metatarsalgia]{"entity": "condition", "value": "Metatarsalgia"}
+    - [Microcephaly]{"entity": "condition", "value": "Microcephaly"}
+    - [Microscopic colitis]{"entity": "condition", "value": "Microscopic colitis"}
+    - [Migraine]{"entity": "condition", "value": "Migraine"}
+    - [Migraine with aura]{"entity": "condition", "value": "Migraine with aura"}
+    - [Mild cognitive impairment]{"entity": "condition", "value": "Mild cognitive impairment"}
+    - [MCI]{"entity": "condition", "value": "Mild cognitive impairment"}
+    - [Milk allergy]{"entity": "condition", "value": "Milk allergy"}
+    - [Miscarriage]{"entity": "condition", "value": "Miscarriage"}
+    - [Mitral valve disease]{"entity": "condition", "value": "Mitral valve disease"}
+    - [Mitral valve prolapse]{"entity": "condition", "value": "Mitral valve prolapse"}
+    - [Mitral valve regurgitation]{"entity": "condition", "value": "Mitral valve regurgitation"}
+    - [Mitral valve stenosis]{"entity": "condition", "value": "Mitral valve stenosis"}
+    - [Mittelschmerz]{"entity": "condition", "value": "Mittelschmerz"}
+    - [Mixed connective tissue disease]{"entity": "condition", "value": "Mixed connective tissue disease"}
+    - [Molar pregnancy]{"entity": "condition", "value": "Molar pregnancy"}
+    - [Mold allergy]{"entity": "condition", "value": "Mold allergy"}
+    - [Moles]{"entity": "condition", "value": "Moles"}
+    - [Molluscum contagiosum]{"entity": "condition", "value": "Molluscum contagiosum"}
+    - [Monoclonal gammopathy of undetermined significance]{"entity": "condition", "value": "Monoclonal gammopathy of undetermined significance"}
+    - [MGUS]{"entity": "condition", "value": "Monoclonal gammopathy of undetermined significance"}
+    - [Mononucleosis]{"entity": "condition", "value": "Mononucleosis"}
+    - [Mood disorders]{"entity": "condition", "value": "Mood disorders"}
+    - [Morning sickness]{"entity": "condition", "value": "Morning sickness"}
+    - [Morphea]{"entity": "condition", "value": "Morphea"}
+    - [Morton's neuroma]{"entity": "condition", "value": "Morton's neuroma"}
+    - [Mosquito bites]{"entity": "condition", "value": "Mosquito bites"}
+    - [Mouth cancer]{"entity": "condition", "value": "Mouth cancer"}
+    - [Movement disorders]{"entity": "condition", "value": "Movement disorders"}
+    - [Moyamoya disease]{"entity": "condition", "value": "Moyamoya disease"}
+    - [MRSA infection]{"entity": "condition", "value": "MRSA infection"}
+    - [Multiple endocrine neoplasia type 1]{"entity": "condition", "value": "MEN 1"}
+    - [MEN 1]{"entity": "condition", "value": "MEN 1"}
+    - [Multiple endocrine neoplasia]{"entity": "condition", "value": "MEN 2"}
+    - [type 2]{"entity": "condition", "value": "MEN 2"}
+    - [MEN 2]{"entity": "condition", "value": "MEN 2"}
+    - [Multiple myeloma]{"entity": "condition", "value": "Multiple myeloma"}
+    - [Multiple sclerosis]{"entity": "condition", "value": "Multiple sclerosis"}
+    - [Multiple system atrophy]{"entity": "condition", "value": "Multiple system atrophy"}
+    - [MSA]{"entity": "condition", "value": "Multiple system atrophy"}
+    - [Multisystem inflammatory syndrome in children]{"entity": "condition", "value": "Multisystem inflammatory syndrome in children"}
+    - [MIS C]{"entity": "condition", "value": "Multisystem inflammatory syndrome in children"}
+    - [Mumps]{"entity": "condition", "value": "Mumps"}
+    - [Muscle cramp]{"entity": "condition", "value": "Muscle cramp"}
+    - [Muscle strains]{"entity": "condition", "value": "Muscle strains"}
+    - [Muscular dystrophy]{"entity": "condition", "value": "Muscular dystrophy"}
+    - [Myalgic encephalomyelitis]{"entity": "condition", "value": "ME/CFS"}
+    - [chronic fatigue syndrome]{"entity": "condition", "value": "ME/CFS"}
+    - [ME/CFS]{"entity": "condition", "value": "ME/CFS"}
+    - [Myasthenia gravis]{"entity": "condition", "value": "Myasthenia gravis"}
+    - [Myelodysplastic syndromes]{"entity": "condition", "value": "Myelodysplastic syndromes"}
+    - [Myelofibrosis]{"entity": "condition", "value": "Myelofibrosis"}
+    - [Myocardial ischemia]{"entity": "condition", "value": "Myocardial ischemia"}
+    - [Myocarditis]{"entity": "condition", "value": "Myocarditis"}
+    - [Myoclonus]{"entity": "condition", "value": "Myoclonus"}
+    - [Myofascial pain syndrome]{"entity": "condition", "value": "Myofascial pain syndrome"}
+    - [Myxofibrosarcoma]{"entity": "condition", "value": "Myxofibrosarcoma"}
+    - [Nail fungus]{"entity": "condition", "value": "Nail fungus"}
+    - [Narcissistic personality disorder]{"entity": "condition", "value": "Narcissistic personality disorder"}
+    - [Narcolepsy]{"entity": "condition", "value": "Narcolepsy"}
+    - [Nasal and paranasal tumors]{"entity": "condition", "value": "Nasal and paranasal tumors"}
+    - [Nasal polyps]{"entity": "condition", "value": "Nasal polyps"}
+    - [Nasopharyngeal carcinoma]{"entity": "condition", "value": "Nasopharyngeal carcinoma"}
+    - [Nearsightedness]{"entity": "condition", "value": "Nearsightedness"}
+    - [Neck pain]{"entity": "condition", "value": "Neck pain"}
+    - [Nephrogenic systemic fibrosis]{"entity": "condition", "value": "Nephrogenic systemic fibrosis"}
+    - [Nephrotic syndrome]{"entity": "condition", "value": "Nephrotic syndrome"}
+    - [Neuroblastoma]{"entity": "condition", "value": "Neuroblastoma"}
+    - [Neurodermatitis]{"entity": "condition", "value": "Neurodermatitis"}
+    - [Neuroendocrine tumors]{"entity": "condition", "value": "Neuroendocrine tumors"}
+    - [Neurofibroma]{"entity": "condition", "value": "Neurofibroma"}
+    - [Neurofibromatosis]{"entity": "condition", "value": "Neurofibromatosis"}
+    - [Neuromyelitis optica]{"entity": "condition", "value": "Neuromyelitis optica"}
+    - [Nickel allergy]{"entity": "condition", "value": "Nickel allergy"}
+    - [Nicotine dependence]{"entity": "condition", "value": "Nicotine dependence"}
+    - [Niemann Pick]{"entity": "condition", "value": "Niemann-Pick"}
+    - [Nightmare disorder]{"entity": "condition", "value": "Nightmare disorder"}
+    - [Nonalcoholic fatty liver disease]{"entity": "condition", "value": "Nonalcoholic fatty liver disease"}
+    - [Nonallergic rhinitis]{"entity": "condition", "value": "Nonallergic rhinitis"}
+    - [Non Hodgkin's lymphoma]{"entity": "condition", "value": "Non-Hodgkin's lymphoma"}
+    - [Nonmelanoma skin cancer]{"entity": "condition", "value": "Nonmelanoma skin cancer"}
+    - [Noonan syndrome]{"entity": "condition", "value": "Noonan syndrome"}
+    - [Norovirus infection]{"entity": "condition", "value": "Norovirus infection"}
+    - [Obesity]{"entity": "condition", "value": "Obesity"}
+    - [Obsessive compulsive disorder]{"entity": "condition", "value": "Obsessive-compulsive disorder"}
+    - [OCD]{"entity": "condition", "value": "Obsessive-compulsive disorder"}
+    - [Obstructive sleep apnea]{"entity": "condition", "value": "Obstructive sleep apnea"}
+    - [Occupational asthma]{"entity": "condition", "value": "Occupational asthma"}
+    - [Ocular rosacea]{"entity": "condition", "value": "Ocular rosacea"}
+    - [Oligodendroglioma]{"entity": "condition", "value": "Oligodendroglioma"}
+    - [Oppositional defiant disorder]{"entity": "condition", "value": "Oppositional defiant disorder"}
+    - [ODD]{"entity": "condition", "value": "Oppositional defiant disorder"}
+    - [Optic neuritis]{"entity": "condition", "value": "Optic neuritis"}
+    - [Oral lichen planus]{"entity": "condition", "value": "Oral lichen planus"}
+    - [Oral thrush]{"entity": "condition", "value": "Oral thrush"}
+    - [Orchitis]{"entity": "condition", "value": "Orchitis"}
+    - [Orthostatic hypotension]{"entity": "condition", "value": "Orthostatic hypotension"}
+    - [postural hypotension]{"entity": "condition", "value": "Orthostatic hypotension"}
+    - [Osteoarthritis]{"entity": "condition", "value": "Osteoarthritis"}
+    - [Osteochondritis dissecans]{"entity": "condition", "value": "Osteochondritis dissecans"}
+    - [Osteomyelitis]{"entity": "condition", "value": "Osteomyelitis"}
+    - [Osteoporosis]{"entity": "condition", "value": "Osteoporosis"}
+    - [Osteosarcoma]{"entity": "condition", "value": "Osteosarcoma"}
+    - [Ovarian cancer]{"entity": "condition", "value": "Ovarian cancer"}
+    - [Ovarian cysts]{"entity": "condition", "value": "Ovarian cysts"}
+    - [Ovarian hyperstimulation syndrome]{"entity": "condition", "value": "Ovarian hyperstimulation syndrome"}
+    - [Overactive bladder]{"entity": "condition", "value": "Overactive bladder"}
+    - [Paget's disease of bone]{"entity": "condition", "value": "Paget's disease of bone"}
+    - [Paget's disease of the breast]{"entity": "condition", "value": "Paget's disease of the breast"}
+    - [Painful intercourse]{"entity": "condition", "value": "Painful intercourse"}
+    - [dyspareunia]{"entity": "condition", "value": "Painful intercourse"}
+    - [Pancreatic cancer]{"entity": "condition", "value": "Pancreatic cancer"}
+    - [Pancreatic cysts]{"entity": "condition", "value": "Pancreatic cysts"}
+    - [Pancreatic neuroendocrine tumors]{"entity": "condition", "value": "Pancreatic neuroendocrine tumors"}
+    - [Pancreatitis]{"entity": "condition", "value": "Pancreatitis"}
+    - [Panic attacks and panic disorder]{"entity": "condition", "value": "Panic attacks and panic disorder"}
+    - [Paraganglioma]{"entity": "condition", "value": "Paraganglioma"}
+    - [Paraneoplastic syndromes of the nervous system]{"entity": "condition", "value": "Paraneoplastic syndromes of the nervous system"}
+    - [Parkinson's disease]{"entity": "condition", "value": "Parkinson's disease"}
+    - [Parotid tumors]{"entity": "condition", "value": "Parotid tumors"}
+    - [Partial anomalous pulmonary venous return]{"entity": "condition", "value": "Partial anomalous pulmonary venous return"}
+    - [Parvovirus infection]{"entity": "condition", "value": "Parvovirus infection"}
+    - [Patellar tendinitis]{"entity": "condition", "value": "Patellar tendinitis"}
+    - [Patellofemoral pain syndrome]{"entity": "condition", "value": "Patellofemoral pain syndrome"}
+    - [Patent ductus arteriosus]{"entity": "condition", "value": "Patent ductus arteriosus"}
+    - [PDA]{"entity": "condition", "value": "Patent ductus arteriosus"}
+    - [Patent foramen ovale]{"entity": "condition", "value": "Patent foramen ovale"}
+    - [Peanut allergy]{"entity": "condition", "value": "Peanut allergy"}
+    - [Pectus excavatum]{"entity": "condition", "value": "Pectus excavatum"}
+    - [Pediatric brain tumors]{"entity": "condition", "value": "Pediatric brain tumors"}
+    - [Pediatric obstructive sleep apnea]{"entity": "condition", "value": "Pediatric obstructive sleep apnea"}
+    - [Pediatric white blood cell disorders]{"entity": "condition", "value": "Pediatric white blood cell disorders"}
+    - [Pelvic inflammatory disease]{"entity": "condition", "value": "Pelvic inflammatory disease"}
+    - [PID]{"entity": "condition", "value": "Pelvic inflammatory disease"}
+    - [Pelvic organ prolapse]{"entity": "condition", "value": "Pelvic organ prolapse"}
+    - [Pemphigus]{"entity": "condition", "value": "Pemphigus"}
+    - [Penicillin allergy]{"entity": "condition", "value": "Penicillin allergy"}
+    - [Peptic ulcer]{"entity": "condition", "value": "Peptic ulcer"}
+    - [Pericardial effusion]{"entity": "condition", "value": "Pericardial effusion"}
+    - [Pericarditis]{"entity": "condition", "value": "Pericarditis"}
+    - [Perimenopause]{"entity": "condition", "value": "Perimenopause"}
+    - [Periodontitis]{"entity": "condition", "value": "Periodontitis"}
+    - [Peripheral artery disease]{"entity": "condition", "value": "Peripheral artery disease"}
+    - [PAD]{"entity": "condition", "value": "Peripheral artery disease"}
+    - [Peripheral nerve injuries]{"entity": "condition", "value": "Peripheral nerve injuries"}
+    - [Peripheral nerve tumors]{"entity": "condition", "value": "Peripheral nerve tumors"}
+    - [Peripheral neuropathy]{"entity": "condition", "value": "Peripheral neuropathy"}
+    - [Peritonitis]{"entity": "condition", "value": "Peritonitis"}
+    - [Persistent depressive disorder]{"entity": "condition", "value": "Persistent depressive disorder"}
+    - [Persistent post concussive symptoms]{"entity": "condition", "value": "Persistent post-concussive symptoms"}
+    - [Post concussion syndrome]{"entity": "condition", "value": "Persistent post-concussive symptoms"}
+    - [Personality disorders]{"entity": "condition", "value": "Personality disorders"}
+    - [Pet allergy]{"entity": "condition", "value": "Pet allergy"}
+    - [Peyronie's disease]{"entity": "condition", "value": "Peyronie's disease"}
+    - [Phenylketonuria]{"entity": "condition", "value": "Phenylketonuria"}
+    - [PKU]{"entity": "condition", "value": "Phenylketonuria"}
+    - [Pheochromocytoma]{"entity": "condition", "value": "Pheochromocytoma"}
+    - [Pilonidal cyst]{"entity": "condition", "value": "Pilonidal cyst"}
+    - [Pinched nerve]{"entity": "condition", "value": "Pinched nerve"}
+    - [Pineoblastoma]{"entity": "condition", "value": "Pineoblastoma"}
+    - [Pink eye]{"entity": "condition", "value": "Conjunctivitis"}
+    - [conjunctivitis]{"entity": "condition", "value": "Conjunctivitis"}
+    - [Pinworm infection]{"entity": "condition", "value": "Pinworm infection"}
+    - [Pituitary tumors]{"entity": "condition", "value": "Pituitary tumors"}
+    - [Pityriasis rosea]{"entity": "condition", "value": "Pityriasis rosea"}
+    - [Placenta accreta]{"entity": "condition", "value": "Placenta accreta"}
+    - [Placenta previa]{"entity": "condition", "value": "Placenta previa"}
+    - [Placental abruption]{"entity": "condition", "value": "Placental abruption"}
+    - [Plague]{"entity": "condition", "value": "Plague"}
+    - [Plantar fasciitis]{"entity": "condition", "value": "Plantar fasciitis"}
+    - [Plantar warts]{"entity": "condition", "value": "Plantar warts"}
+    - [Pleurisy]{"entity": "condition", "value": "Pleurisy"}
+    - [Pneumonia]{"entity": "condition", "value": "Pneumonia"}
+    - [Pneumonitis]{"entity": "condition", "value": "Pneumonitis"}
+    - [Pneumothorax]{"entity": "condition", "value": "Pneumothorax"}
+    - [POEMS syndrome]{"entity": "condition", "value": "POEMS syndrome"}
+    - [Poison ivy rash]{"entity": "condition", "value": "Poison ivy rash"}
+    - [Polio]{"entity": "condition", "value": "Polio"}
+    - [Polycystic kidney disease]{"entity": "condition", "value": "Polycystic kidney disease"}
+    - [Polycystic ovary syndrome]{"entity": "condition", "value": "Polycystic ovary syndrome"}
+    - [PCOS]{"entity": "condition", "value": "Polycystic ovary syndrome"}
+    - [Polycythemia vera]{"entity": "condition", "value": "Polycythemia vera"}
+    - [Polyhydramnios]{"entity": "condition", "value": "Polyhydramnios"}
+    - [Polymorphous light eruption]{"entity": "condition", "value": "Polymorphous light eruption"}
+    - [Polymyalgia rheumatica]{"entity": "condition", "value": "Polymyalgia rheumatica"}
+    - [Polymyositis]{"entity": "condition", "value": "Polymyositis"}
+    - [Popliteal artery aneurysm]{"entity": "condition", "value": "Popliteal artery aneurysm"}
+    - [Popliteal artery entrapment syndrome]{"entity": "condition", "value": "Popliteal artery entrapment syndrome"}
+    - [Porphyria]{"entity": "condition", "value": "Porphyria"}
+    - [Posterior cortical atrophy]{"entity": "condition", "value": "Posterior cortical atrophy"}
+    - [Posterior vaginal prolapse]{"entity": "condition", "value": "Posterior vaginal prolapse"}
+    - [rectocele]{"entity": "condition", "value": "Posterior vaginal prolapse"}
+    - [Postherpetic neuralgia]{"entity": "condition", "value": "Postherpetic neuralgia"}
+    - [Postpartum depression]{"entity": "condition", "value": "Postpartum depression"}
+    - [Postpartum preeclampsia]{"entity": "condition", "value": "Postpartum preeclampsia"}
+    - [Post polio syndrome]{"entity": "condition", "value": "Post-polio syndrome"}
+    - [Post traumatic stress disorder]{"entity": "condition", "value": "Post-traumatic stress disorder"}
+    - [PTSD]{"entity": "condition", "value": "Post-traumatic stress disorder"}
+    - [Post vasectomy pain syndrome]{"entity": "condition", "value": "Post-vasectomy pain syndrome"}
+    - [Pouchitis]{"entity": "condition", "value": "Pouchitis"}
+    - [Prader Willi syndrome]{"entity": "condition", "value": "Prader-Willi syndrome"}
+    - [Precocious puberty]{"entity": "condition", "value": "Precocious puberty"}
+    - [Prediabetes]{"entity": "condition", "value": "Prediabetes"}
+    - [Preeclampsia]{"entity": "condition", "value": "Preeclampsia"}
+    - [Premature birth]{"entity": "condition", "value": "Premature birth"}
+    - [Premature ejaculation]{"entity": "condition", "value": "Premature ejaculation"}
+    - [Premature ventricular contractions]{"entity": "condition", "value": "Premature ventricular contractions"}
+    - [PVCs]{"entity": "condition", "value": "Premature ventricular contractions"}
+    - [Premenstrual syndrome]{"entity": "condition", "value": "Premenstrual syndrome"}
+    - [PMS]{"entity": "condition", "value": "Premenstrual syndrome"}
+    - [Presbyopia]{"entity": "condition", "value": "Presbyopia"}
+    - [Prescription drug abuse]{"entity": "condition", "value": "Prescription drug abuse"}
+    - [Preterm labor]{"entity": "condition", "value": "Preterm labor"}
+    - [Priapism]{"entity": "condition", "value": "Priapism"}
+    - [Primary biliary cholangitis]{"entity": "condition", "value": "Primary biliary cholangitis"}
+    - [Primary immunodeficiency]{"entity": "condition", "value": "Primary immunodeficiency"}
+    - [Primary lateral sclerosis]{"entity": "condition", "value": "Primary lateral sclerosis"}
+    - [PLS]{"entity": "condition", "value": "Primary lateral sclerosis"}
+    - [Primary ovarian insufficiency]{"entity": "condition", "value": "Primary ovarian insufficiency"}
+    - [Primary progressive aphasia]{"entity": "condition", "value": "Primary progressive aphasia"}
+    - [Primary sclerosing cholangitis]{"entity": "condition", "value": "Primary sclerosing cholangitis"}
+    - [Proctitis]{"entity": "condition", "value": "Proctitis"}
+    - [Progeria]{"entity": "condition", "value": "Progeria"}
+    - [Progressive supranuclear palsy]{"entity": "condition", "value": "Progressive supranuclear palsy"}
+    - [Prolactinoma]{"entity": "condition", "value": "Prolactinoma"}
+    - [Prostate cancer]{"entity": "condition", "value": "Prostate cancer"}
+    - [Prostatitis]{"entity": "condition", "value": "Prostatitis"}
+    - [Pseudobulbar affect]{"entity": "condition", "value": "Pseudobulbar affect"}
+    - [Pseudocholinesterase deficiency]{"entity": "condition", "value": "Pseudocholinesterase deficiency"}
+    - [Pseudogout]{"entity": "condition", "value": "Pseudogout"}
+    - [Pseudomembranous colitis]{"entity": "condition", "value": "Pseudomembranous colitis"}
+    - [Pseudotumor cerebri]{"entity": "condition", "value": "Pseudotumor cerebri"}
+    - [idiopathic intracranial hypertension]{"entity": "condition", "value": "Pseudotumor cerebri"}
+    - [Psoriasis]{"entity": "condition", "value": "Psoriasis"}
+    - [Psoriatic arthritis]{"entity": "condition", "value": "Psoriatic arthritis"}
+    - [Pubic lice]{"entity": "condition", "value": "Pubic lice"}
+    - [crabs]{"entity": "condition", "value": "Pubic lice"}
+    - [Pulmonary atresia]{"entity": "condition", "value": "Pulmonary atresia"}
+    - [Pulmonary atresia with intact ventricular septum]{"entity": "condition", "value": "Pulmonary atresia with intact ventricular septum"}
+    - [Pulmonary atresia with ventricular septal defect]{"entity": "condition", "value": "Pulmonary atresia with ventricular septal defect"}
+    - [Pulmonary edema]{"entity": "condition", "value": "Pulmonary edema"}
+    - [Pulmonary embolism]{"entity": "condition", "value": "Pulmonary embolism"}
+    - [Pulmonary fibrosis]{"entity": "condition", "value": "Pulmonary fibrosis"}
+    - [Pulmonary hypertension]{"entity": "condition", "value": "Pulmonary hypertension"}
+    - [Pulmonary valve disease]{"entity": "condition", "value": "Pulmonary valve disease"}
+    - [Pulmonary valve stenosis]{"entity": "condition", "value": "Pulmonary valve stenosis"}
+    - [Pyloric stenosis]{"entity": "condition", "value": "Pyloric stenosis"}
+    - [Pyoderma gangrenosum]{"entity": "condition", "value": "Pyoderma gangrenosum"}
+    - [Rabies]{"entity": "condition", "value": "Rabies"}
+    - [Radiation enteritis]{"entity": "condition", "value": "Radiation enteritis"}
+    - [Radiation sickness]{"entity": "condition", "value": "Radiation sickness"}
+    - [Ramsay Hunt syndrome]{"entity": "condition", "value": "Ramsay Hunt syndrome"}
+    - [Raynaud's disease]{"entity": "condition", "value": "Raynaud's disease"}
+    - [Reactive arthritis]{"entity": "condition", "value": "Reactive arthritis"}
+    - [Reactive attachment disorder]{"entity": "condition", "value": "Reactive attachment disorder"}
+    - [Rectal cancer]{"entity": "condition", "value": "Rectal cancer"}
+    - [Rectal prolapse]{"entity": "condition", "value": "Rectal prolapse"}
+    - [Rectovaginal fistula]{"entity": "condition", "value": "Rectovaginal fistula"}
+    - [Recurrent breast cancer]{"entity": "condition", "value": "Recurrent breast cancer"}
+    - [REM sleep behavior disorder]{"entity": "condition", "value": "REM sleep behavior disorder"}
+    - [Renal artery stenosis]{"entity": "condition", "value": "Renal artery stenosis"}
+    - [Residual limb pain]{"entity": "condition", "value": "Residual limb pain"}
+    - [Respiratory syncytial virus]{"entity": "condition", "value": "Respiratory syncytial virus"}
+    - [RSV]{"entity": "condition", "value": "Respiratory syncytial virus"}
+    - [Restless legs syndrome]{"entity": "condition", "value": "Restless legs syndrome"}
+    - [Retinal detachment]{"entity": "condition", "value": "Retinal detachment"}
+    - [Retinal diseases]{"entity": "condition", "value": "Retinal diseases"}
+    - [Retinoblastoma]{"entity": "condition", "value": "Retinoblastoma"}
+    - [Retractile testicle]{"entity": "condition", "value": "Retractile testicle"}
+    - [Retrograde ejaculation]{"entity": "condition", "value": "Retrograde ejaculation"}
+    - [Rett syndrome]{"entity": "condition", "value": "Rett syndrome"}
+    - [Reye's syndrome]{"entity": "condition", "value": "Reye's syndrome"}
+    - [Rhabdomyosarcoma]{"entity": "condition", "value": "Rhabdomyosarcoma"}
+    - [Rheumatic fever]{"entity": "condition", "value": "Rheumatic fever"}
+    - [Rheumatoid arthritis]{"entity": "condition", "value": "Rheumatoid arthritis"}
+    - [Rickets]{"entity": "condition", "value": "Rickets"}
+    - [Ringworm in body]{"entity": "condition", "value": "Ringworm-body"}
+    - [Ringworm in scalp]{"entity": "condition", "value": "Ringworm-scalp"}
+    - [Rosacea]{"entity": "condition", "value": "Rosacea"}
+    - [Roseola]{"entity": "condition", "value": "Roseola"}
+    - [Rotator cuff injury]{"entity": "condition", "value": "Rotator cuff injury"}
+    - [Rotavirus]{"entity": "condition", "value": "Rotavirus"}
+    - [Rubella]{"entity": "condition", "value": "Rubella"}
+    - [Rumination syndrome]{"entity": "condition", "value": "Rumination syndrome"}
+    - [Ruptured eardrum]{"entity": "condition", "value": "Ruptured eardrum"}
+    - [perforated eardrum]{"entity": "condition", "value": "Ruptured eardrum"}
+    - [Ruptured spleen]{"entity": "condition", "value": "Ruptured spleen"}
+    - [Sacral dimple]{"entity": "condition", "value": "Sacral dimple"}
+    - [Sacroiliitis]{"entity": "condition", "value": "Sacroiliitis"}
+    - [Salivary gland tumors]{"entity": "condition", "value": "Salivary gland tumors"}
+    - [Salmonella infection]{"entity": "condition", "value": "Salmonella infection"}
+    - [Sarcoidosis]{"entity": "condition", "value": "Sarcoidosis"}
+    - [Sarcoma]{"entity": "condition", "value": "Sarcoma"}
+    - [Scabies]{"entity": "condition", "value": "Scabies"}
+    - [Scarlet fever]{"entity": "condition", "value": "Scarlet fever"}
+    - [Schizoaffective disorder]{"entity": "condition", "value": "Schizoaffective disorder"}
+    - [Schizoid personality disorder]{"entity": "condition", "value": "Schizoid personality disorder"}
+    - [Schizophrenia]{"entity": "condition", "value": "Schizophrenia"}
+    - [Schizotypal personality disorder]{"entity": "condition", "value": "Schizotypal personality disorder"}
+    - [Schwannoma]{"entity": "condition", "value": "Schwannoma"}
+    - [Sciatica]{"entity": "condition", "value": "Sciatica"}
+    - [Scleroderma]{"entity": "condition", "value": "Scleroderma"}
+    - [Sclerosing mesenteritis]{"entity": "condition", "value": "Sclerosing mesenteritis"}
+    - [Scoliosis]{"entity": "condition", "value": "Scoliosis"}
+    - [Scorpion sting]{"entity": "condition", "value": "Scorpion sting"}
+    - [Scrotal masses]{"entity": "condition", "value": "Scrotal masses"}
+    - [Seasonal affective disorder]{"entity": "condition", "value": "Seasonal affective disorder"}
+    - [SAD]{"entity": "condition", "value": "Seasonal affective disorder"}
+    - [Sebaceous carcinoma]{"entity": "condition", "value": "Sebaceous carcinoma"}
+    - [Seborrheic dermatitis]{"entity": "condition", "value": "Seborrheic dermatitis"}
+    - [Seborrheic keratosis]{"entity": "condition", "value": "Seborrheic keratosis"}
+    - [Secondary hypertension]{"entity": "condition", "value": "Secondary hypertension"}
+    - [Seizures]{"entity": "condition", "value": "Seizures"}
+    - [Selective IgA deficiency]{"entity": "condition", "value": "Selective IgA deficiency"}
+    - [Self injury]{"entity": "condition", "value": "Self-injury"}
+    - [cutting]{"entity": "condition", "value": "Self-injury"}
+    - [Separation anxiety disorder]{"entity": "condition", "value": "Separation anxiety disorder"}
+    - [Sepsis]{"entity": "condition", "value": "Sepsis"}
+    - [Septic arthritis]{"entity": "condition", "value": "Septic arthritis"}
+    - [Serotonin syndrome]{"entity": "condition", "value": "Serotonin syndrome"}
+    - [Severe acute respiratory syndrome]{"entity": "condition", "value": "Severe acute respiratory syndrome"}
+    - [SARS]{"entity": "condition", "value": "Severe acute respiratory syndrome"}
+    - [Sex headaches]{"entity": "condition", "value": "Sex headaches"}
+    - [Sexually transmitted diseases]{"entity": "condition", "value": "Sexually transmitted diseases"}
+    - [STDs]{"entity": "condition", "value": "Sexually transmitted diseases"}
+    - [STD]{"entity": "condition", "value": "Sexually transmitted diseases"}
+    - [Shaken baby syndrome]{"entity": "condition", "value": "Shaken baby syndrome"}
+    - [Shellfish allergy]{"entity": "condition", "value": "Shellfish allergy"}
+    - [Shigella infection]{"entity": "condition", "value": "Shigella infection"}
+    - [Shin splints]{"entity": "condition", "value": "Shin splints"}
+    - [Shingles]{"entity": "condition", "value": "Shingles"}
+    - [Short bowel syndrome]{"entity": "condition", "value": "Short bowel syndrome"}
+    - [Sick sinus syndrome]{"entity": "condition", "value": "Sick sinus syndrome"}
+    - [Sickle cell anemia]{"entity": "condition", "value": "Sickle cell anemia"}
+    - [Sinus headaches]{"entity": "condition", "value": "Sinus headaches"}
+    - [Sjogren's syndrome]{"entity": "condition", "value": "Sjogren's syndrome"}
+    - [Skin cancer]{"entity": "condition", "value": "Skin cancer"}
+    - [Sleep apnea]{"entity": "condition", "value": "Sleep apnea"}
+    - [Sleep disorders]{"entity": "condition", "value": "Sleep disorders"}
+    - [Sleep terrors]{"entity": "condition", "value": "Sleep terrors"}
+    - [night terrors]{"entity": "condition", "value": "Sleep terrors"}
+    - [Sleepwalking]{"entity": "condition", "value": "Sleepwalking"}
+    - [Small bowel cancer]{"entity": "condition", "value": "Small bowel cancer"}
+    - [Small bowel prolapse]{"entity": "condition", "value": "Small bowel prolapse"}
+    - [enterocele]{"entity": "condition", "value": "Small bowel prolapse"}
+    - [Small intestinal bacterial overgrowth]{"entity": "condition", "value": "Small intestinal bacterial overgrowth"}
+    - [SIBO]{"entity": "condition", "value": "Small intestinal bacterial overgrowth"}
+    - [Small vessel disease]{"entity": "condition", "value": "Small vessel disease"}
+    - [Smallpox]{"entity": "condition", "value": "Smallpox"}
+    - [Snoring]{"entity": "condition", "value": "Snoring"}
+    - [Social anxiety disorder]{"entity": "condition", "value": "Social anxiety disorder"}
+    - [social phobia]{"entity": "condition", "value": "Social anxiety disorder"}
+    - [Soft palate cancer]{"entity": "condition", "value": "Soft palate cancer"}
+    - [Soft tissue sarcoma]{"entity": "condition", "value": "Soft tissue sarcoma"}
+    - [Solitary fibrous tumor]{"entity": "condition", "value": "Solitary fibrous tumor"}
+    - [Solitary rectal ulcer syndrome]{"entity": "condition", "value": "Solitary rectal ulcer syndrome"}
+    - [Somatic symptom disorder]{"entity": "condition", "value": "Somatic symptom disorder"}
+    - [Sore throat]{"entity": "condition", "value": "Sore throat"}
+    - [Specific phobias]{"entity": "condition", "value": "Specific phobias"}
+    - [Spermatocele]{"entity": "condition", "value": "Spermatocele"}
+    - [Spider bites]{"entity": "condition", "value": "Spider bites"}
+    - [Spina bifida]{"entity": "condition", "value": "Spina bifida"}
+    - [Spinal arteriovenous malformation]{"entity": "condition", "value": "Spinal arteriovenous malformation"}
+    - [AVM]{"entity": "condition", "value": "Spinal arteriovenous malformation"}
+    - [Spinal cord injury]{"entity": "condition", "value": "Spinal cord injury"}
+    - [Spinal cord tumor]{"entity": "condition", "value": "Spinal cord tumor"}
+    - [Spinal headaches]{"entity": "condition", "value": "Spinal headaches"}
+    - [Spinal stenosis]{"entity": "condition", "value": "Spinal stenosis"}
+    - [Spontaneous coronary artery dissection]{"entity": "condition", "value": "Spontaneous coronary artery dissection"}
+    - [SCAD]{"entity": "condition", "value": "Spontaneous coronary artery dissection"}
+    - [Sprained ankle]{"entity": "condition", "value": "Sprained ankle"}
+    - [Sprains]{"entity": "condition", "value": "Sprains"}
+    - [Squamous cell carcinoma of the skin]{"entity": "condition", "value": "Squamous cell carcinoma of the skin"}
+    - [Stage 4 prostate cancer]{"entity": "condition", "value": "Stage 4 prostate cancer"}
+    - [Staph infections]{"entity": "condition", "value": "Staph infections"}
+    - [Stevens Johnson syndrome]{"entity": "condition", "value": "Stevens-Johnson syndrome"}
+    - [Stickler syndrome]{"entity": "condition", "value": "Stickler syndrome"}
+    - [Stomach cancer]{"entity": "condition", "value": "Stomach cancer"}
+    - [Stomach polyps]{"entity": "condition", "value": "Stomach polyps"}
+    - [Strep throat]{"entity": "condition", "value": "Strep throat"}
+    - [Stress fractures]{"entity": "condition", "value": "Stress fractures"}
+    - [Stress incontinence]{"entity": "condition", "value": "Stress incontinence"}
+    - [Stretch marks]{"entity": "condition", "value": "Stretch marks"}
+    - [Stroke]{"entity": "condition", "value": "Stroke"}
+    - [Stuttering]{"entity": "condition", "value": "Stuttering"}
+    - [Stye]{"entity": "condition", "value": "Stye"}
+    - [sty]{"entity": "condition", "value": "Stye"}
+    - [Subarachnoid hemorrhage]{"entity": "condition", "value": "Subarachnoid hemorrhage"}
+    - [Subconjunctival hemorrhage]{"entity": "condition", "value": "Subconjunctival hemorrhage"}
+    - [broken blood vessel in eye]{"entity": "condition", "value": "Subconjunctival hemorrhage"}
+    - [Sudden cardiac arrest]{"entity": "condition", "value": "Sudden cardiac arrest"}
+    - [Sudden infant death syndrome]{"entity": "condition", "value": "Sudden infant death syndrome"}
+    - [SIDS]{"entity": "condition", "value": "Sudden infant death syndrome"}
+    - [Suicide and suicidal thoughts]{"entity": "condition", "value": "Suicide and suicidal thoughts"}
+    - [Sun allergy]{"entity": "condition", "value": "Sun allergy"}
+    - [Sunburn]{"entity": "condition", "value": "Sunburn"}
+    - [Supraventricular tachycardia]{"entity": "condition", "value": "Supraventricular tachycardia"}
+    - [Suspicious breast lumps]{"entity": "condition", "value": "Suspicious breast lumps"}
+    - [Sweating and body odor]{"entity": "condition", "value": "Sweating and body odor"}
+    - [Swimmer's ear]{"entity": "condition", "value": "Swimmer's ear"}
+    - [Swimmer's itch]{"entity": "condition", "value": "Swimmer's itch"}
+    - [Swollen knee]{"entity": "condition", "value": "Swollen knee"}
+    - [Swollen lymph nodes]{"entity": "condition", "value": "Swollen lymph nodes"}
+    - [Synovial sarcoma]{"entity": "condition", "value": "Synovial sarcoma"}
+    - [Syphilis]{"entity": "condition", "value": "Syphilis"}
+    - [Syringomyelia]{"entity": "condition", "value": "Syringomyelia"}
+    - [Systemic mastocytosis]{"entity": "condition", "value": "Systemic mastocytosis"}
+    - [Tachycardia]{"entity": "condition", "value": "Tachycardia"}
+    - [Takayasu's arteritis]{"entity": "condition", "value": "Takayasu's arteritis"}
+    - [Tapeworm infection]{"entity": "condition", "value": "Tapeworm infection"}
+    - [Tay Sachs disease]{"entity": "condition", "value": "Tay-Sachs disease"}
+    - [Teen depression]{"entity": "condition", "value": "Teen depression"}
+    - [Temporal lobe seizure]{"entity": "condition", "value": "Temporal lobe seizure"}
+    - [TEN]{"entity": "condition", "value": "TEN"}
+    - [Tendinitis]{"entity": "condition", "value": "Tendinitis"}
+    - [Tennis elbow]{"entity": "condition", "value": "Tennis elbow"}
+    - [Tension headache]{"entity": "condition", "value": "Tension headache"}
+    - [Testicular cancer]{"entity": "condition", "value": "Testicular cancer"}
+    - [Testicular torsion]{"entity": "condition", "value": "Testicular torsion"}
+    - [Tetanus]{"entity": "condition", "value": "Tetanus"}
+    - [Tetralogy of Fallot]{"entity": "condition", "value": "Tetralogy of Fallot"}
+    - [Thalassemia]{"entity": "condition", "value": "Thalassemia"}
+    - [Thoracic aortic aneurysm]{"entity": "condition", "value": "Thoracic aortic aneurysm"}
+    - [Thoracic outlet syndrome]{"entity": "condition", "value": "Thoracic outlet syndrome"}
+    - [Throat cancer]{"entity": "condition", "value": "Throat cancer"}
+    - [Thrombocytopenia]{"entity": "condition", "value": "Thrombocytopenia"}
+    - [Thrombocytosis]{"entity": "condition", "value": "Thrombocytosis"}
+    - [Thrombophlebitis]{"entity": "condition", "value": "Thrombophlebitis"}
+    - [Thumb arthritis]{"entity": "condition", "value": "Thumb arthritis"}
+    - [Thunderclap headaches]{"entity": "condition", "value": "Thunderclap headaches"}
+    - [Thyroid cancer]{"entity": "condition", "value": "Thyroid cancer"}
+    - [Thyroid nodules]{"entity": "condition", "value": "Thyroid nodules"}
+    - [Tinea versicolor]{"entity": "condition", "value": "Tinea versicolor"}
+    - [Tinnitus]{"entity": "condition", "value": "Tinnitus"}
+    - [TMJ disorders]{"entity": "condition", "value": "TMJ disorders"}
+    - [Toe walking in children]{"entity": "condition", "value": "Toe walking in children"}
+    - [Tongue cancer]{"entity": "condition", "value": "Tongue cancer"}
+    - [Tongue tie]{"entity": "condition", "value": "Tongue-tie"}
+    - [ankyloglossia]{"entity": "condition", "value": "Tongue-tie"}
+    - [Tonic clonic]{"entity": "condition", "value": "Tonic-clonic seizure"}
+    - [grand mal seizure]{"entity": "condition", "value": "Tonic-clonic seizure"}
+    - [Tonsil cancer]{"entity": "condition", "value": "Tonsil cancer"}
+    - [Tonsillitis]{"entity": "condition", "value": "Tonsillitis"}
+    - [Tooth abscess]{"entity": "condition", "value": "Tooth abscess"}
+    - [Torn meniscus]{"entity": "condition", "value": "Torn meniscus"}
+    - [Total anomalous pulmonary venous return]{"entity": "condition", "value": "Total anomalous pulmonary venous return"}
+    - [TAPVR]{"entity": "condition", "value": "Total anomalous pulmonary venous return"}
+    - [Tourette syndrome]{"entity": "condition", "value": "Tourette syndrome"}
+    - [Toxic hepatitis]{"entity": "condition", "value": "Toxic hepatitis"}
+    - [Toxic shock syndrome]{"entity": "condition", "value": "Toxic shock syndrome"}
+    - [Toxoplasmosis]{"entity": "condition", "value": "Toxoplasmosis"}
+    - [Trachoma]{"entity": "condition", "value": "Trachoma"}
+    - [Transient global amnesia]{"entity": "condition", "value": "Transient global amnesia"}
+    - [Transient ischemic attack]{"entity": "condition", "value": "Transient ischemic attack"}
+    - [TIA]{"entity": "condition", "value": "Transient ischemic attack"}
+    - [Transposition of the great arteries]{"entity": "condition", "value": "Transposition of the great arteries"}
+    - [Transverse myelitis]{"entity": "condition", "value": "Transverse myelitis"}
+    - [Traumatic brain injury]{"entity": "condition", "value": "Traumatic brain injury"}
+    - [Traveler's diarrhea]{"entity": "condition", "value": "Traveler's diarrhea"}
+    - [Trichinosis]{"entity": "condition", "value": "Trichinosis"}
+    - [Trichomoniasis]{"entity": "condition", "value": "Trichomoniasis"}
+    - [Trichotillomania]{"entity": "condition", "value": "Trichotillomania"}
+    - [hair pulling disorder]{"entity": "condition", "value": "Trichotillomania"}
+    - [Tricuspid atresia]{"entity": "condition", "value": "Tricuspid atresia"}
+    - [Tricuspid valve disease]{"entity": "condition", "value": "Tricuspid valve disease"}
+    - [Tricuspid valve regurgitation]{"entity": "condition", "value": "Tricuspid valve regurgitation"}
+    - [Trigeminal neuralgia]{"entity": "condition", "value": "Trigeminal neuralgia"}
+    - [Trigger finger]{"entity": "condition", "value": "Trigger finger"}
+    - [Triple X syndrome]{"entity": "condition", "value": "Triple X syndrome"}
+    - [Truncus arteriosus]{"entity": "condition", "value": "Truncus arteriosus"}
+    - [Tuberculosis]{"entity": "condition", "value": "Tuberculosis"}
+    - [Tuberous sclerosis]{"entity": "condition", "value": "Tuberous sclerosis"}
+    - [Turner syndrome]{"entity": "condition", "value": "Turner syndrome"}
+    - [Type 1 diabetes]{"entity": "condition", "value": "Type 1 diabetes"}
+    - [Type 1 diabetes in children]{"entity": "condition", "value": "Type 1 diabetes in children"}
+    - [Type 2 diabetes]{"entity": "condition", "value": "Type 2 diabetes"}
+    - [Type 2 diabetes in children]{"entity": "condition", "value": "Type 2 diabetes in children"}
+    - [Typhoid fever]{"entity": "condition", "value": "Typhoid fever"}
+    - [Ulcerative colitis]{"entity": "condition", "value": "Ulcerative colitis"}
+    - [Ulnar wrist pain]{"entity": "condition", "value": "Ulnar wrist pain"}
+    - [Umbilical hernia]{"entity": "condition", "value": "Umbilical hernia"}
+    - [Undescended testicle]{"entity": "condition", "value": "Undescended testicle"}
+    - [Undifferentiated pleomorphic sarcoma]{"entity": "condition", "value": "Undifferentiated pleomorphic sarcoma"}
+    - [Ureteral cancer]{"entity": "condition", "value": "Ureteral cancer"}
+    - [Ureteral obstruction]{"entity": "condition", "value": "Ureteral obstruction"}
+    - [Urethral stricture]{"entity": "condition", "value": "Urethral stricture"}
+    - [Urinary incontinence]{"entity": "condition", "value": "Urinary incontinence"}
+    - [Urinary tract infection]{"entity": "condition", "value": "Urinary tract infection"}
+    - [UTI]{"entity": "condition", "value": "Urinary tract infection"}
+    - [Urine color]{"entity": "condition", "value": "Urine color"}
+    - [Uterine fibroids]{"entity": "condition", "value": "Uterine fibroids"}
+    - [Uterine polyps]{"entity": "condition", "value": "Uterine polyps"}
+    - [Uterine prolapse]{"entity": "condition", "value": "Uterine prolapse"}
+    - [Uveitis]{"entity": "condition", "value": "Uveitis"}
+    - [Vaginal agenesis]{"entity": "condition", "value": "Vaginal agenesis"}
+    - [Vaginal atrophy]{"entity": "condition", "value": "Vaginal atrophy"}
+    - [Vaginal cancer]{"entity": "condition", "value": "Vaginal cancer"}
+    - [Vaginal fistula]{"entity": "condition", "value": "Vaginal fistula"}
+    - [Vaginitis]{"entity": "condition", "value": "Vaginitis"}
+    - [Valley fever]{"entity": "condition", "value": "Valley fever"}
+    - [Varicocele]{"entity": "condition", "value": "Varicocele"}
+    - [Varicose veins]{"entity": "condition", "value": "Varicose veins"}
+    - [Vascular dementia]{"entity": "condition", "value": "Vascular dementia"}
+    - [Vascular rings]{"entity": "condition", "value": "Vascular rings"}
+    - [Vasculitis]{"entity": "condition", "value": "Vasculitis"}
+    - [Vasovagal syncope]{"entity": "condition", "value": "Vasovagal syncope"}
+    - [Ventricular fibrillation]{"entity": "condition", "value": "Ventricular fibrillation"}
+    - [Ventricular septal defect]{"entity": "condition", "value": "Ventricular septal defect"}
+    - [VSD]{"entity": "condition", "value": "Ventricular septal defect"}
+    - [Ventricular tachycardia]{"entity": "condition", "value": "Ventricular tachycardia"}
+    - [Vertebral tumor]{"entity": "condition", "value": "Vertebral tumor"}
+    - [Vesicoureteral reflux]{"entity": "condition", "value": "Vesicoureteral reflux"}
+    - [Viral gastroenteritis]{"entity": "condition", "value": "Viral gastroenteritis"}
+    - [stomach flu]{"entity": "condition", "value": "Viral gastroenteritis"}
+    - [Viral hemorrhagic fevers]{"entity": "condition", "value": "Viral hemorrhagic fevers"}
+    - [Vitamin deficiency anemia]{"entity": "condition", "value": "Vitamin deficiency anemia"}
+    - [Vitiligo]{"entity": "condition", "value": "Vitiligo"}
+    - [Vocal cord paralysis]{"entity": "condition", "value": "Vocal cord paralysis"}
+    - [Voice disorders]{"entity": "condition", "value": "Voice disorders"}
+    - [Von Willebrand disease]{"entity": "condition", "value": "Von Willebrand disease"}
+    - [Vulvar cancer]{"entity": "condition", "value": "Vulvar cancer"}
+    - [Vulvodynia]{"entity": "condition", "value": "Vulvodynia"}
+    - [Waldenstrom macroglobulinemia]{"entity": "condition", "value": "Waldenstrom macroglobulinemia"}
+    - [Wet macular degeneration]{"entity": "condition", "value": "Wet macular degeneration"}
+    - [Wheat allergy]{"entity": "condition", "value": "Wheat allergy"}
+    - [Whiplash]{"entity": "condition", "value": "Whiplash"}
+    - [Whipple's disease]{"entity": "condition", "value": "Whipple's disease"}
+    - [Whooping cough]{"entity": "condition", "value": "Whooping cough"}
+    - [Wilms tumor]{"entity": "condition", "value": "Wilms tumor"}
+    - [Wilson's disease]{"entity": "condition", "value": "Wilson's disease"}
+    - [Wolff Parkinson White]{"entity": "condition", "value": "Wolff-Parkinson-White syndrome"}
+    - [WPW]{"entity": "condition", "value": "Wolff-Parkinson-White syndrome"}
+    - [WPW syndrome]{"entity": "condition", "value": "Wolff-Parkinson-White syndrome"}
+    - [Wrinkles]{"entity": "condition", "value": "Wrinkles"}
+    - [Wrist pain]{"entity": "condition", "value": "Wrist pain"}
+    - [X linked agammaglobulinemia]{"entity": "condition", "value": "X-linked agammaglobulinemia"}
+    - [Yeast infection vaginal]{"entity": "condition", "value": "Yeast infection"}
+    - [Vaginal Yeast infection]{"entity": "condition", "value": "Yeast infection"}
+    - [Yips]{"entity": "condition", "value": "Yips"}
+    - [Zollinger Ellison syndrome]{"entity": "condition", "value": "Zollinger-Ellison syndrome"}
+    - [Complications]{"entity": "infotype", "value": "Complications"} of [COVID]{"entity": "condition", "value": "Coronavirus disease 2019"}
+    - [Diabetes]{"entity": "condition", "value": "Diabetes"} [Risk factors]{"entity": "infotype", "value": "Risk factors"}
+- synonym: Overview
+  examples: |
+    - info
+    - INFO
+    - overview
+- synonym: Treatment
+  examples: |
+    - can I do
+    - can I help
+    - treatments
+    - treatment
+- synonym: Symptoms
+  examples: |
+    - symptoms
+- synonym: Diagnosis
+  examples: |
+    - diagnosed
+- synonym: Causes
+  examples: |
+    - causes
+- synonym: Lifestyle and home remedies
+  examples: |
+    - natural remedies
+- synonym: Complications
+  examples: |
+    - complications
+- synonym: Prevention
+  examples: |
+    - prevented
